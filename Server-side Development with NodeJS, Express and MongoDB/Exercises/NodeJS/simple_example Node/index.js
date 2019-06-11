@@ -1,8 +1,8 @@
-var rect = {
-    perimeter:(x,y) => (2*(x+y)),
-    area:(x,y) =>(x*y)
-};
-
+// var rect = {
+//     perimeter:(x,y) => (2*(x+y)),
+//     area:(x,y) =>(x*y)
+// };
+var rect = require('./rect');
 function solve_rect(l,b){
   console.log('Solving for rect with l = ' +l +' and b = '+ b );
   if (l<=0 || b<=0){

@@ -74,3 +74,5 @@ Incoming request message info. available thru  the first parameter "req"
 
 ​	`const fs = require('fs');`
 
+##### Using Postman
+

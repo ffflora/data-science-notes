@@ -1,12 +1,11 @@
 {
-  "name": "node-examples",
+  "name": "node-http",
   "version": "1.0.0",
-  "description": "Simple Node Examples",
+  "description": "node http module example",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index"
-
+    "start":"Node index"
   },
   "author": "Flora Jiang",
   "license": "ISC"

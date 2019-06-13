@@ -4,29 +4,15 @@ const morgan = require('morgan');
 const hostname = 'localhost';
 const port = 3000;
 const bodyParser = require('body-parser');
-
+const dishRouter = require('./routes/dishRouter');//file base node
 const app = express();
+
+
 app.use(morgan('dev'));
 app.use(bodyParser.json());
-app.all('/dishes',(req,res,next)=>{ //middleware
-    res.statusCode = 200;
-    res.setHeader('Content-Type','text/plain');
-    next();
-});
-app.get('/dishes',(req,res,next)=>{
-    res.end('Will send all the dishes to you!');
-});
-app.post('/dishes',(req,res,next)=>{
-    res.end('Will add the dish: '+req.body.name + ' with details '+ req.body.description);
-});
-app.put('/dishes',(req,res,next)=>{
-    res.statusCode = 403;
-    res.end('Operation not supported on /dishes');
-});
-app.delete('/dishes',(req,res,next)=>{ //this is dangerous, supposed only operated by authorized people
-    res.end('Delete all the dishes.');
-});
 
+//any of the /dishes will be handled by dishRouter
+app.use('/dishes',dishRouter);// mount the router at an endpoint
 app.get('/dishes/:dishId',(req,res,next)=>{
     res.end('Will send the dish '+req.params.dishId+' to you!');
 });

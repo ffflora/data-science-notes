@@ -17,3 +17,5 @@ Books:
 - [Python Natural Language Processing: Advanced machine learning and deep learning techniques for natural language processing](https://www.amazon.com/Python-Natural-Language-Processing-techniques/dp/1787121429/ref=mt_paperback?_encoding=UTF8&me=)
   - [GitHub Repo by the Author](https://github.com/jalajthanaki/NLPython)
 
+- [Python for Data Analysis: Data Wrangling with Pandas, NumPy, and IPython 2nd Edition by Wes McKinne](https://www.amazon.com/Python-Data-Analysis-Wrangling-IPython/dp/1491957662)
+

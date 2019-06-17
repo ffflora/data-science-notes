@@ -2,7 +2,7 @@
 
 Intelligent Automation AI RPA 
 
-![Automation Spectrum](C:\Users\Flora\Documents\python\Data_Science_Notes\Archived_Pics\healthcare\RPA.png)
+![Automation Spectrum](https://github.com/FFFlora/Data_Science_Notes/blob/master/Archived_Pics/healthcare/RPA.png)
 
 In next 5-10 years, patients might interact direct with intelligent assistant.
 

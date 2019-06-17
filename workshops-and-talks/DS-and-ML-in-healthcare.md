@@ -1,6 +1,6 @@
 # 数据科学和人工智能在Healthcare领域应用
 
-![](C:\Users\Flora\Documents\python\Data_Science_Notes\Archived_Pics\healthcare\notes.png)
+![](https://github.com/FFFlora/Data_Science_Notes/blob/master/Archived_Pics/healthcare/notes.png)
 
 ##### Remarks:
 
@@ -14,13 +14,13 @@ CAD systems, 在医疗系统也会有辅助功能。
 
 IN **EHR**, the first thing to figure out is the <u>coding system</u>, 每一个特殊的缩写字符都有特殊的含义。
 
-![](C:\Users\Flora\Documents\python\Data_Science_Notes\Archived_Pics\healthcare\EHR.png)
+![](https://github.com/FFFlora/Data_Science_Notes/blob/master/Archived_Pics/healthcare/EHR.png)
 
 
 
 **Biomedical Image Analysis,** 都是 non-sql kind of data, 是非结构性的，需要用到 deep learning 相关的知识
 
-![](C:\Users\Flora\Documents\python\Data_Science_Notes\Archived_Pics\healthcare\biomedical image analysis.png)
+![](https://github.com/FFFlora/Data_Science_Notes/blob/master/Archived_Pics/healthcare/biomedical image analysis.png)
 
 
 
@@ -28,7 +28,7 @@ IN **EHR**, the first thing to figure out is the <u>coding system</u>, 每一个
 
 可穿戴设备/传感器的数据，比如心脏科检查的 holter.
 
-![](C:\Users\Flora\Documents\python\Data_Science_Notes\Archived_Pics\healthcare\Sensor Data.png)
+![](https://github.com/FFFlora/Data_Science_Notes/blob/master/Archived_Pics/healthcare/Sensor Data.png)
 
 
 
@@ -36,7 +36,7 @@ IN **EHR**, the first thing to figure out is the <u>coding system</u>, 每一个
 
 信号的数据需要去噪（有点类似信号处理的技术）
 
-![](C:\Users\Flora\Documents\python\Data_Science_Notes\Archived_Pics\healthcare\BSA.png)
+![](https://github.com/FFFlora/Data_Science_Notes/blob/master/Archived_Pics/healthcare/BSA.png)
 
 
 
@@ -44,7 +44,7 @@ IN **EHR**, the first thing to figure out is the <u>coding system</u>, 每一个
 
 是医疗系统内新兴的方向，更加偏向个体化的方案，在这个领域需要有很多统计方向的应用。
 
-![](C:\Users\Flora\Documents\python\Data_Science_Notes\Archived_Pics\healthcare\PM.png)
+![](https://github.com/FFFlora/Data_Science_Notes/blob/master/Archived_Pics/healthcare/PM.png)
 
 
 
@@ -54,7 +54,7 @@ voice to text, text to voice, text mining.
 
 医生可以用一只录音笔录下诊断，然后有团队可以运用 NLP 整合信息；或者有 app 可以直接和患者对话并给出方案。有些可以跟 image processing 结合，因为会有 scanned old records, 需要图像处理。
 
-![](C:\Users\Flora\Documents\python\Data_Science_Notes\Archived_Pics\healthcare\dm.png)
+![](https://github.com/FFFlora/Data_Science_Notes/blob/master/Archived_Pics/healthcare/dm.png)
 
 
 
@@ -62,7 +62,7 @@ voice to text, text to voice, text mining.
 
 对医疗文献的考察
 
-![](C:\Users\Flora\Documents\python\Data_Science_Notes\Archived_Pics\healthcare\bl.png)
+![](https://github.com/FFFlora/Data_Science_Notes/blob/master/Archived_Pics/healthcare/bl.png)
 
 
 
@@ -74,7 +74,7 @@ Detection, 测试，跟踪 疫情感染/爆发
 
 或者成为 research topics' data sources.
 
-![](C:\Users\Flora\Documents\python\Data_Science_Notes\Archived_Pics\healthcare\sma.png)
+![](https://github.com/FFFlora/Data_Science_Notes/blob/master/Archived_Pics/healthcare/sma.png)
 
 
 

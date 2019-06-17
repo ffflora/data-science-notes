@@ -12,11 +12,11 @@ A lot of these individual components are probably what we are doing today, but w
 
 #### RPA: robotic process automation
 
-![](C:\Users\Flora\Documents\python\Data_Science_Notes\Archived_Pics\healthcare\Rpa2.png)
+![](https://github.com/FFFlora/Data_Science_Notes/blob/master/Archived_Pics/healthcare/Rpa2.png)
 
 There is a section of things that people are doing, and a section of things that robots are doing inside an organization, but from an **intelligent automation**'s perspective, is the **merging of people and technology**'s job: **Software Robots**.
 
-![](C:\Users\Flora\Documents\python\Data_Science_Notes\Archived_Pics\healthcare\rpa3.png)
+![](https://github.com/FFFlora/Data_Science_Notes/blob/master/Archived_Pics/healthcare/rpa3.png)
 
 There three general types of RPA, as above shown. The fact is the varies forms of process automation approaches are vastly different; they serve different functions in an organization.
 
@@ -28,7 +28,7 @@ There three general types of RPA, as above shown. The fact is the varies forms o
 
 
 
-![](C:\Users\Flora\Documents\python\Data_Science_Notes\Archived_Pics\healthcare\rpa4.png)
+![](https://github.com/FFFlora/Data_Science_Notes/blob/master/Archived_Pics/healthcare/rpa4.png)
 
 Any process can be automated processed, but not all the process should be automated processed. 
 
@@ -38,7 +38,7 @@ This types of process that RPA delivers not only  speed and accuracy, but true R
 
 ##### Healthcare Intelligent Automation Use Cases
 
-![](C:\Users\Flora\Documents\python\Data_Science_Notes\Archived_Pics\healthcare\rpa cases.png)
+![](https://github.com/FFFlora/Data_Science_Notes/blob/master/Archived_Pics/healthcare/rpa cases.png)
 
 All of these procedures from left to right on the back end, including treatment, discharge planning and beyond. For providers it uses as an administrative function and claims and billing have been in initial places really driven some success from the use of RPA, weather it is supply chain process or claim fetching, claims submission and claim checks and etc.
 
@@ -46,7 +46,7 @@ All of these procedures from left to right on the back end, including treatment,
 
 ##### case 1
 
-![](C:\Users\Flora\Documents\python\Data_Science_Notes\Archived_Pics\healthcare\rpa5.png)
+![](https://github.com/FFFlora/Data_Science_Notes/blob/master/Archived_Pics/healthcare/rpa5.png)
 
 Preauthorization with commercial insurance payers:
 
@@ -64,7 +64,7 @@ Professional Billing Cash posting:
 
 
 
-![](C:\Users\Flora\Documents\python\Data_Science_Notes\Archived_Pics\healthcare\rpa6.png)
+![](https://github.com/FFFlora/Data_Science_Notes/blob/master/Archived_Pics/healthcare/rpa6.png)
 
 Patient's preference, personalize  ★
 
@@ -74,7 +74,7 @@ how to provide education training, followups based on the patient's information,
 
 ##### case 3
 
-![](C:\Users\Flora\Documents\python\Data_Science_Notes\Archived_Pics\healthcare\rpa7.png)
+![](https://github.com/FFFlora/Data_Science_Notes/blob/master/Archived_Pics/healthcare/rpa7.png)
 
 predicting readmission. 
 
@@ -82,7 +82,7 @@ use deep learning and really deep data mining to identify characteristic that ar
 
 
 
-![](C:\Users\Flora\Documents\python\Data_Science_Notes\Archived_Pics\healthcare\rpa8.png)
+![](https://github.com/FFFlora/Data_Science_Notes/blob/master/Archived_Pics/healthcare/rpa8.png)
 
 Implementing RPA should be similar to any large-scale transformational project.
 
@@ -92,7 +92,7 @@ Always to start small and simple and go back to the four-phase cycle again and a
 
 
 
-![](C:\Users\Flora\Documents\python\Data_Science_Notes\Archived_Pics\healthcare\rpa9.png)
+![](https://github.com/FFFlora/Data_Science_Notes/blob/master/Archived_Pics/healthcare/rpa9.png)
 
 - if the process is inefficient and broken, if you do automation on it, it still going to be inefficient and broken. So be smart.
 
@@ -106,7 +106,7 @@ Always to start small and simple and go back to the four-phase cycle again and a
 
 Digital Employee 
 
-![](C:\Users\Flora\Documents\python\Data_Science_Notes\Archived_Pics\healthcare\rpa10.png)
+![](https://github.com/FFFlora/Data_Science_Notes/blob/master/Archived_Pics/healthcare/rpa10.png)
 
 RPA frees up people.
 

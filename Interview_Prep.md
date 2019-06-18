@@ -13,6 +13,15 @@ keywords:
 - manage data pipelines for large datasets 
 - make sure the data is being  **efficiently collected** and **retrieved** from its source when **needed, cleaned and preprocessed**.
 
+Data Pipeline:
+
+- In order to conquer the challenges, distributed system is a must.
+  - Able to handle large pressure
+  - Higher chance of failure
+- Designing for the whole company 
+  - High scalability ready future growth //保证系统有高扩展性 
+  - Be genetic enough to support different teams 
+
 [**科技巨头都爱的Data Pipeline，如何自动化你的数据工作？**](http://www.raincent.com/content-10-10786-1.html)
 
 [ETL best practices with Airflow documentation site](http://www.raincent.com/content-10-10786-1.html)
@@ -40,6 +49,30 @@ Apache Spark, Hadoop, Hive & Kafka. SQL 的夯实基础也很重要的。
 [达观数据：Selenium使用技巧与机器人流程自动化实战](https://zhuanlan.zhihu.com/p/64892225)
 
 [RPA流程自动化机器人专栏](https://zhuanlan.zhihu.com/RPA2018)
+
+Server Related:
+
+How to scale web service(with AWS)?
+
+Techniques to make distributed system highly available?
+
+Analytics Related:
+
+SQL
+
+Optimize Hive query
+
+Distribution System related:
+
+Data replication strategies
+
+Message delivery guarantees
+
+Cloud computing related:
+
+How to sync data across S3 buckets in different AWS account?
+
+[到底什么是流计算（Stream Computing）](https://blog.csdn.net/historyasamirror/article/details/3719710)
 
 ##### 2. Useful Toolkits:
 
@@ -100,9 +133,17 @@ Removing the unwanted feature is also feature engineering.
 
 ##### 8. MapRuduce 的工作原理
 
+本质就是 divide and conquer. 
 
+六大过程：
 
+Input -> split -> map -> shuffle -> reduce -> finalize 执行过程是高度并行的
 
+架构:
+
+有 map worker, reduce worker, master, 其中 master 可以代理 user program 去协调/assign 很多事情，每个 map worker 在本地把数据切分开存在本地的缓存或硬盘上，reduce worker 就在本地取数据，完成 reduce 之后就 finalize. 
+
+hive是基于Hadoop的一个数据仓库工具，可以将结构化的数据文件映射为一张数据库表，并提供简单的sql查询功能，将sql语句转换为MapReduce任务进行运行。
 
 Terms:
 
@@ -210,27 +251,27 @@ General
 
 1. With which programming languages and environments are you most comfortable working?
 
-
+   √
 
 2. What are some pros and cons about your favorite statistical software?
 
-
+   √
 
 3. Tell me about an original algorithm you’ve created.
 
-
+   
 
 4. Describe a data science project in which you worked with a substantial programming component. What did  you learn from that experience?
 
-
+   √
 
 5. Do you contribute to any open source projects?
 
-
+   √
 
 6. How would you clean a dataset in (insert language here)?
 
-
+   
 
 7. Tell me about the coding you did during your last project?
 
@@ -451,7 +492,7 @@ You have a table called transactions/session that contains a username and the ti
 
   
 
-Case Study 3:
+##### Case Study 3:
 
 Find the "Top three salaries" in each department
 
@@ -846,7 +887,25 @@ What are you passionate about?
 
 5. You have a dataset containing 100K  rows and 100 columns, with one of those columns being our dependent  variable for a problem we’d like to solve. How can we quickly identify  which columns will be helpful in predicting the  dependent variable. Identify two techniques and explain them to me as  though I were 5 years old.
 
+   first answer:
 
+   There are many answers. Here are a few:
+
+   - Decision Tree learners (as mentioned below)
+   - Correlations (take the strongest correlated features and test further)
+   - Linear/Logistic Regression
+   - Information Gain / Entropy
+   - Chi-Square
+
+   and others.
+
+   This  question was designed for an entry-level data analyst position. Most  often, the answers given are graph them (which you can do, but it's time  intensive), regression techniques, or correlations (depending on the  data set).
+
+   The goal isn't to answer the  question 100% correct (as there is more than one way to do it), but  determine the creativity in the applicant and their approach to problem  solving at scale.
+
+   second answer:
+
+   One idea could be to train some model to the data towards that dependent variable. After training, you can then see the feature coefficients which represent how heavily each column is weighted.  This tells you which columns the model "thinks" are most important.
 
 6. How would you detect bogus reviews, or bogus Facebook accounts used for bad purposes?
 
@@ -857,6 +916,12 @@ What are you passionate about?
 
 
 8. How would you optimize a web  crawler to run much faster, extract better information, and better  summarize data to produce cleaner databases?
+
+   Putting a time-out threshold to less than 2 seconds, extracting no more than the first 20 KB of each pages, and not revisiting pages already crawled (that is, avoid recurrence in your algorithm) are good starting points.
+
+   
+
+[Python selenium —— 一定要会用selenium的等待，三种等待方式解读](https://blog.csdn.net/huilan_same/article/details/52544521)
 
 ##### Storytelling
 
@@ -887,6 +952,35 @@ What are you passionate about?
 [200万人阅读的AB Testing好文](https://www.dataapplab.com/5-critical-steps-to-predictive-business-analysis/)
 
 [如何在不花一分钱进行A/B Testing？一起来薅资本主义羊毛！](https://www.dataapplab.com/how-to-a-b-test-without-spending-a-dime/)
+
+- Two-sample hypothesis testing
+- Randomized experiments with two variants: A and B
+- A: control; B: variation
+- User-experience design: identify changes to web pages that increase clicks on a banner
+- Current website: control; NULL hypothesis
+- New version: variation; alternative hypothesis
+- 优点：
+  - 简单易用，结果可靠
+  - 洞察用户行为，把现有 feature 优化到极致
+  - 降低上线风险，节省调研时间。
+- 缺点：
+  - 用户体验差异：（张/王不同组，但体验不同， not fair）
+    - 社交产品
+    - 价格实验
+  - 额外资源，维护两套系统
+  - 泄露保密 feature 
+- should have a culture of 'always' A/B testing
+- How to run A/B  testing?
+  - 先 run A/A Testing. 就是在流量分割之后，先在两组都做A/A testing, 目的是
+    - 校准 A/B testing 平台，看两组有没有显著差异。
+    - 设定转化率的浮动基准 floating standard, 分别是这两组的自然活动范围。
+    - 确定样本大小。
+
+- 时间轴：
+
+  A/A testing takes around 7-10 days
+
+  ![](C:\Users\Flora\Documents\python\Data_Science_Notes\Archived_Pics\ab-testing\1.png)
 
 ##### How to prepare a DS interview?
 

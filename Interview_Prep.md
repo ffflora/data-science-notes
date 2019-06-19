@@ -1,4 +1,4 @@
-[5/26 数据科学和人工智能在Healthcare领域应用](https://www.youtube.com/watch?v=JRyZ8RZ7BKE)
+# 数据科学界的《五年高考三年模拟》
 
 ##### 1. What is data Science Engineer?
 
@@ -1492,4 +1492,10 @@ http://scott.fortmann-roe.com/docs/BiasVariance.html
 
 Reference: https://en.wikipedia.org/wiki/Latent_semantic_analysis
 
- 
+
+
+front-end 是要拿著 backend 已經做好的 API 來做 integration 的
+frond-end 負責 make http request to backend
+backend 負責 give response
+response 里有對應格式的 data
+front-end 要拿著這些 data 展示到 tables、charts 或者其他的 visualization tool 上

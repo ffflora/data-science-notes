@@ -1,4 +1,4 @@
-#### Node Modules
+### <u>Node Modules</u>
 
 ##### 3 kinds of Node
 
@@ -11,30 +11,28 @@
   - installed using NPM
   - node_modules folder in your Node application
 
-##### Using Node Modules
+#### Using Node Modules
 
-By using require function
+By using **require** function
 
 File-based: require('./module_name')
 
 core/External: require('module_name')
 
-###### Useful command line:
+#### Useful command line:
 
 - in the dir, `npm start`  
 - `atom .` open the current `json` file. 
 
-##### Networking Essentials 
+#### Networking Essentials 
 
-HTTP verbs:
+**HTTP verbs:**
 
 HEAD, GET, POST, PUT, DELETE, TRACE, OPTION, CONNECT
 
-​				communicate
+Browser <==========> Web Server ( communicate with each other)
 
-Browser <==========> Web Server 
-
-##### Node HTTP Module
+#### Node HTTP Module
 
 Using the module: 
 
@@ -44,15 +42,21 @@ Creating a server:
 
 ​	`const server = http.createServer(function(req,res){...});`
 
+**<u>req v.s. res</u>**
+
+req 是包含有关引发事件的 HTTP 请求的信息的对象。相应 req, 使用 res 发送回所需的 HTTP 相应。req 请求对象，res 相应对象。
+
+
+
 Starting the server:
 
 ​	`server.listen(port,...);`
 
-Incoming request message info. available thru  the first parameter "req"
+Incoming request message info available thru  the first parameter **req**
 
 ​	`req.headers`, `req.body`, ...
 
- Response msg is constructed on the second param "res"
+ Response msg is constructed on the second param **res**
 
 ​	`res.setHeader...`
 

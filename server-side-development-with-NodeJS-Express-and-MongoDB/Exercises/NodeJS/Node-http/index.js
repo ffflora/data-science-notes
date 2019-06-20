@@ -4,7 +4,7 @@ const path = require('path')
 const hostname = 'localhost';
 const port = 3000;
 const server = http.createServer((req,res) => {
-  console.log("request for " + req.url + 'by method '+ req.method);
+  console.log("request for " + req.url + 'by method '+ req.method); //create a server
 
   if(req.method == 'GET'){
       var fileURL;
@@ -20,7 +20,6 @@ const server = http.createServer((req,res) => {
               res.statusCode = 404;
               res.setHeader = ('Content-Type','text/html');
               res.end('<html><body><h1>Error 404: '+fileURL +' not found </h1></body></html>');
-
               return;
             }
             else {

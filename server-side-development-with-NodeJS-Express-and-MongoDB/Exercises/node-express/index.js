@@ -1,9 +1,9 @@
 const express = require('express');
 const http = require('http');
-const morgan = require('morgan');
+const morgan = require('morgan'); //log middleware
 const hostname = 'localhost';
 const port = 3000;
-const bodyParser = require('body-parser');
+const bodyParser = require('body-parser'); //middleware, 对 POST 的请求进行解析
 const dishRouter = require('./routes/dishRouter');//file base node
 const app = express();
 
@@ -16,7 +16,7 @@ app.use('/dishes',dishRouter);// mount the router at an endpoint
 app.get('/dishes/:dishId',(req,res,next)=>{
     res.end('Will send the dish '+req.params.dishId+' to you!');
 });
-app.post('/dishes/:dishId',(req,res,next)=>{
+app.post('/dishes/:dishId',(req,res,next)=>{ //I can't create any new dishes from the client  side?
   res.statusCode = 403;
   res.end('POST Operation not supported on /dishes/ '+ req.params.dishId);
 });
@@ -27,7 +27,7 @@ app.put('/dishes/:dishId',(req,res,next)=>{
 app.delete('/dishes/:dishId',(req,res,next)=>{ //this is dangerous, supposed only operated by authorized people
     res.end('Delete the dish '+ req.params.dishId );
 });
-app.use(express.static(__dirname+'/public'));
+app.use(express.static(__dirname+'/public'));//??
 app.use((req,res,next)=>{
     //console.log(req.headers); //morgan will log sufficient info.
     res.statusCode = 200;

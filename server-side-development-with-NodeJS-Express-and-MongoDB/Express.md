@@ -6,11 +6,11 @@ In project folder, do:
 
 `npm install express --save`
 
+`--save` 可以省掉手动修改 *package.json* 文件的步骤
+
 ------
 
-
-
-#### REST:
+### REST:
 
 Web services, there are two common approaches:
 
@@ -33,15 +33,15 @@ Naming Resources:
 
 Verbs:
 
-- HTTP GET --- READ 
+- **HTTP GET --- READ** 
   - Used to request  for information 
   - Transfer the data from the server to the client in some representation(XML, JSON) 
-- HTTP POST --- CREATE
+- **HTTP POST --- CREATE**
   - create a resource
   - `POST http://www.conFusion.food/feedback`
     - content: {first name, last name, email, comment etc.}
     - create a new feedback with given properties.
-- HTTP PUT --- UPDATE
+- **HTTP PUT --- UPDATE**
   - update a resource
   - `PUT  http://www.conFusion.food/dishes/123`
     - content: {name, image, description, comments,...}
@@ -49,7 +49,7 @@ Verbs:
 - HTTP DELETE --- DELETE
   - `DELETE http://www.conFusion.food/dishes/456`
 
-##### Stateless Server:
+#### Stateless Server:
 
 - Server should not track the client state: every request is a new request from the client.
 - Client should track its own state:
@@ -64,7 +64,7 @@ Verbs:
 
 
 
-#### Express Router:
+### <u>Express Router:</u>
 
 ##### Body  Parser:
 

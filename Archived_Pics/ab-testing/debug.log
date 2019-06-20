@@ -36,3 +36,4 @@
 [0618/200641:ERROR:audio_low_latency_output_win.cc(279)] Failed to prepare endpoint buffers with silence.
 [0618/200641:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR audio renderer: output device reported an error
 [0618/200657:WARNING:webmediaplayer_impl.cc(341)] Using MultibufferDataSource
+[0619/220032:INFO:exception_record.cc(518)] [QB]Process ID: 31476 Type: 2

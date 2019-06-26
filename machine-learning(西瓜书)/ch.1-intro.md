@@ -1,10 +1,10 @@
-##### ML两大基本问题：
+#### ML两大基本问题：
 
 回归问题 Regression
 
 分类问题 Classification
 
-##### What is ML?
+#### What is ML?
 
 根据已知的数据，学习出一个数学函数 
 $$
@@ -31,9 +31,5 @@ $$
 ---
 
 To Read List:
-
-[达观杯_比赛简介](https://blog.csdn.net/Datawhale/article/details/82634235)
-
-["达观杯" 文本智能处理挑战赛——简介篇 ](https://mp.weixin.qq.com/s?__biz=MzU3Nzg4Mjg3Nw==&mid=2247483677&idx=1&sn=88db4a9728dbbd05a97ea63fc8834720&chksm=fd7c9e8fca0b17999e726930f29688b701b726e6990c8afafd094c2a2ded0ab2dd67d56b7aee&mpshare=1&scene=1&srcid=&key=a275743a4180eb54f611990a25ccced948d1a81934f14688438e3f4582ac4807f29f896e6420db339639d37ce08e5e8beb9063ea5004112d132e77a474af863bc2493319c131b20a8cbacc9fbccf58b2&ascene=1&uin=NTI0ODE4NDgw&devicetype=Windows+10&version=62060833&lang=en&pass_ticket=TWp%2FeQyEeJyvSd63MTZPd%2FTOtlgf1QkiCJTD27ZQ7zl3kRDl9zwcApLSGN583LSV)
 
 [《数学之美》发布会吴军精彩演讲"怎样才能不山寨"](https://www.youtube.com/watch?v=x0zTN8aSeYs)

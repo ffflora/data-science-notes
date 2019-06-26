@@ -42,3 +42,14 @@ JavaScript Standard Style
 #### Tool
 
 EditorConfig 
+
+---
+
+### git push!
+
+`git remote set-url origin ...your ssh address`
+
+可以使用 git remote -v 查看當前 repo 的 remote 設置的是 https address 還是 ssh address
+
+`git@github.com:username/project_name.git` 这种是 SSH address
+

@@ -1,21 +1,22 @@
-# **Data_Science_Notes**     
+# **Data Science Notebook**  📓   
 
-Notes along the Way of Learning Data Science.
+📻 Some notes along the way of learning data science.
 
 
-
-Some online courses and books I follow are listed below:
 
 Courses:
 
-- [Applied Text Mining in Python](https://www.coursera.org/learn/python-text-mining/home/info)
+[Server-side Development with NodeJS, Express and MongoDB](https://github.com/FFFlora/data-science-notes/tree/master/server-side-development-with-NodeJS-Express-and-MongoDB)
 
-- [Server-side Development with NodeJS, Express and MongoDB](https://www.coursera.org/learn/server-side-nodejs/home/info)
+[Applied Text Mining in Python](https://github.com/FFFlora/data-science-notes/tree/master/text-mining)
 
 Books:
 
-- [Python Natural Language Processing: Advanced machine learning and deep learning techniques for natural language processing](https://www.amazon.com/Python-Natural-Language-Processing-techniques/dp/1787121429/ref=mt_paperback?_encoding=UTF8&me=)
-  - [GitHub Repo by the Author](https://github.com/jalajthanaki/NLPython)
+[Python for Data Analysis: Data Wrangling with Pandas, NumPy, and IPython 2nd Edition by Wes McKinne](https://github.com/FFFlora/data-science-notes/tree/master/python-for-data-analysis)
 
-- [Python for Data Analysis: Data Wrangling with Pandas, NumPy, and IPython 2nd Edition by Wes McKinne](https://www.amazon.com/Python-Data-Analysis-Wrangling-IPython/dp/1491957662)
+[Python Natural Language Processing: Advanced machine learning and deep learning techniques for natural language processing](https://github.com/FFFlora/data-science-notes/tree/master/NLPython)
+
+[机器学习 - 周志华著](https://github.com/FFFlora/data-science-notes/tree/master/machine-learning(%E8%A5%BF%E7%93%9C%E4%B9%A6))
+
+[数学之美 - 吴军著](https://github.com/FFFlora/data-science-notes/blob/master/workshops-talks-books/%E6%95%B0%E5%AD%A6%E4%B9%8B%E7%BE%8E.md)
 

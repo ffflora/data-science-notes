@@ -11,10 +11,11 @@
 
 ### Tutorials
 
-- [Ad Hoc Big Data on the Amazon AWS Cloud](https://github.com/FFFlora/data-science-notes/blob/master/workshops-talks-books/Ad Hoc Big Data on the Amazon AWS Cloud.md)
+- [Ad Hoc Big Data on the Amazon AWS Cloud](https://github.com/FFFlora/data-science-notes/blob/master/workshops-talks-books/Ad%20Hoc%20Big%20Data%20on%20the%20Amazon%20AWS%20Cloud.md)
 
 ### Basic Knowledge:
 
 - [SQL Notes](https://github.com/FFFlora/data-science-notes/blob/master/workshops-talks-books/sql-notes.md)
 
 - [GitHub Tricks](https://github.com/FFFlora/data-science-notes/blob/master/workshops-talks-books/github-fundamentals.md)
+

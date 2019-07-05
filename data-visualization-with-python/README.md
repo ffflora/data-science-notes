@@ -2,9 +2,13 @@
 
 
 Course outline:
+
 Introduction to Data Visualization Tools
+
 Basic and Specialized Visualization Tools
+
 Advanced Visualizations and Geospatial Data
+
 
 ### Skills will gain
 

@@ -26,7 +26,7 @@
 
 - [The Master Algorithm - Pedro Domingos](https://github.com/FFFlora/data-science-notes/blob/master/workshops-talks-books/the-master-algorithm.md)
 
-- [机器学习 - 周志华著 :watermelon:](https://github.com/FFFlora/data-science-notes/tree/master/machine-learning-watermelon))
+- [机器学习 - 周志华著 :watermelon:](https://github.com/FFFlora/data-science-notes/tree/master/machine-learning-watermelon)
 
 - [数学之美 - 吴军著 ](https://github.com/FFFlora/data-science-notes/blob/master/workshops-talks-books/%E6%95%B0%E5%AD%A6%E4%B9%8B%E7%BE%8E.md)
 
@@ -41,3 +41,4 @@
 ---
 
 - [Super Data Science Podcast`:headphones:`](https://www.superdatascience.com/podcast)
+

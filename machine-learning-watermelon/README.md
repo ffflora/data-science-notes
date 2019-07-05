@@ -12,5 +12,5 @@
 
 Resources:
 
-[南瓜书 - 西瓜书公式推导参考](https://datawhalechina.github.io/pumpkin-book)
+[南瓜书 - 西瓜书公式推导参考](https://datawhalechina.github.io/pumpkin-book)	
 

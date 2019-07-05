@@ -12,7 +12,7 @@ decision tree 会选择最大的信息增益 Information gain 对 node 进行划
 
 [Machine learning - Decision trees](https://www.youtube.com/watch?v=-dCtJjlEEgM) √
 
-[Random Forest](https://www.youtube.com/watch?v=3kYujfDgmNk&list=PLE6Wd9FR--EdyJ5lbFl8UuGjecvVw66F6&index=12)
+
 
 Need to understand a tree first before trying to understand a forest.
 
@@ -34,9 +34,33 @@ C4.5 是 ID3 的改进：多加了一个增益率。它解决了 ID3 算法的�
 - C4.5 could only use for **classification**.
 - C4.5 使用了熵模型，有大量的 log computation. 如果是连续值的话还有大量的 sorting. 如果能把模型简化并且减少运算强度，但又不牺牲准确率，会更优化此算法。
 
-
-
-
-
 **CART** 目前用的最多。
+
+### 避免 overfitting:（剪枝，prune）
+
+- Stop splitting when not statistically significant
+- Grow, then post-prune
+  - based on validation set. (post-prune 是自下而上的，需要在完全生成决策树之后进行，very time consuming.)
+- Sub-tree replacement pruning : pre-pruning.
+  - Start with the node with the biggest info gain
+  - check the accuracy rate  on the testing set.
+  - if the performance is not better then remove the node.
+
+---
+
+## Random Forests
+
+[Random Forest](https://www.youtube.com/watch?v=3kYujfDgmNk&list=PLE6Wd9FR--EdyJ5lbFl8UuGjecvVw66F6&index=12) √ 
+
+### Build a random tree
+
+Randomness is a good thing. Two sources of randomness: data and features(split).
+
+RT take trees and sum them and divide by the number of trees.  (**bagging trees** )
+
+it is actually ensemble learning method for classification.
+
+All trees are trained independently (and possibly in parallel). During testing, each test point *v* is simultaneously pushed through all trees (starting at the root) until it reaches the corresponding leaves. 
+
+output is all the trees.
 

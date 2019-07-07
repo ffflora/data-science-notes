@@ -4,7 +4,9 @@
 
 
 
-
+|                           Courses                            |                            Books                             |                            Others                            |   Podcasts   |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------: |
+| [:tv:](https://github.com/FFFlora/data-science-notes#courses-tv) | [:books:](https://github.com/FFFlora/data-science-notes#books-books) | [:golf:](https://github.com/FFFlora/data-science-notes#other-useful-things-golf) | :headphones: |
 
 
 
@@ -40,5 +42,7 @@
 
 ---
 
-- [Super Data Science Podcast`:headphones:`](https://www.superdatascience.com/podcast)
+### Podcasts:
+
+- [Super Data Science Podcast :headphones:](https://www.superdatascience.com/podcast)
 

@@ -1499,3 +1499,5 @@ frond-end 負責 make http request to backend
 backend 負責 give response
 response 里有對應格式的 data
 front-end 要拿著這些 data 展示到 tables、charts 或者其他的 visualization tool 上
+
+[The Big List of DS/ML Interview Resources](https://towardsdatascience.com/the-big-list-of-ds-ml-interview-resources-2db4f651bd63)

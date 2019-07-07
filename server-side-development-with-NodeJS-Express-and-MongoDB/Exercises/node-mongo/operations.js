@@ -5,7 +5,7 @@ exports.insertDocument = (db,document,collection,callback)=>{
     coll.insert(document,(err,result)=>{
         assert.equal(err,null);
         console.log('Inserted '+ result.result.n + //2nd result is the js result
-      'documents into the collection '+ collection);
+      ' documents into the collection '+ collection);
       callback(result);
 
     });
@@ -27,7 +27,7 @@ exports.removeDocument = (db,document,collection,callback)=>{
 };
 exports.updateDocument = (db,document,update,collection,callback)=>{
     const coll = db.collection(collection);
-    coll.updateOne(document,{ $set: update}, null,(err,result)=>{
+    coll.updateOne(document,{ $set: update}, null, (err,result)=>{
         assert.equal(err,null);
         console.log('Update the document with ', update);
         callback(result);

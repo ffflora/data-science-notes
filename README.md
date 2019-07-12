@@ -36,7 +36,7 @@
 
 ### Other Useful Things :golf:
 
-- [**Interview Preperation Questions**](https://github.com/FFFlora/data-science-notes/blob/master/interview-prep.md)
+- [**Interview Preperation Questions**](https://github.com/FFFlora/data-science-notes/blob/master/interview-preperation-list.md)
 
 - [workshops-talks-books](https://github.com/FFFlora/data-science-notes/tree/master/workshops-talks-books)
 

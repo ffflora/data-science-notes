@@ -163,15 +163,36 @@ def FuncName(parameter1 , parameter2):
 
 ### 建议 8：利用 assert 语句来发现问题
 
-◆ 建议8：利用assert语句来发现问题
+assert 实际是被设计用来捕获用户所定义的约束的，而不是用来捕获程序本身错误的，因此使用断言需要注意以下几点：
 
-> > 断言实际是被设计用来捕获用户所定义的约束的，而不是用来捕获程序本身错误的，因此使用断言需要注意以下几点：1）不要滥用，这是使用断言最基本的原则。
+1. 不要滥用，这是使用断言最基本的原则。
 
-> > 如果Python本身的异常能够处理就不要再使用断言
+2. 如果Python本身的异常能够处理就不要再使用断言
 
-> > 不要使用断言来检查用户的输入。如对于一个数字类型，如果根据用户的设计该值的范围应该是2～10，较好的做法是使用条件判断，并在不符合条件的时候输出错误提示信息。
+3. 不要使用断言来检查用户的输入。如对于一个数字类型，如果根据用户的设计该值的范围应该是2～10，较好的做法是使用条件判断，并在不符合条件的时候输出错误提示信息。
 
-> > 在函数调用后，当需要确认返回值是否合理时可以使用断言
+4. 在函数调用后，当需要确认返回值是否合理时可以使用断言
+
+```python
+>>> y = 2
+>>> assert x == y, "not equals"
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AssertionError: not equals
+>>> x = 1
+>>> y = 2
+# 以上代码相当于
+>>> if __debug__ and not x == y:
+...     raise AssertionError("not equals")
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+AssertionError: not equals
+```
+
+运行是加入-O参数可以禁用断言。
+
+### 建议 9：数据交换的时候不推荐使用中间变量
 
 ◆ 建议9：数据交换值的时候不推荐使用中间变量
 
@@ -200,27 +221,6 @@ def FuncName(parameter1 , parameter2):
 > > “eval is evil”（eval是邪恶的），这是一句广为人知的对eval的评价，它主要针对的是eval()的安全性。
 
 > > 如果使用对象不是信任源
-
-```python
->>> y = 2
->>> assert x == y, "not equals"
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-AssertionError: not equals
->>> x = 1
->>> y = 2
-# 以上代码相当于
->>> if __debug__ and not x == y:
-...     raise AssertionError("not equals")
-... 
-Traceback (most recent call last):
-  File "<stdin>", line 2, in <module>
-AssertionError: not equals
-```
-
-运行是加入-O参数可以禁用断言。
-
-### 建议 9：数据交换的时候不推荐使用中间变量
 
 ```python
 >>> Timer('temp = x; x = y; y = temp;', 'x = 2; y = 3').timeit()

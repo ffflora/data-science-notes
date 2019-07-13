@@ -31,6 +31,24 @@ Commonly used to represent **cumulated totals** using numbers or percentages ove
 
 
 
+### Histogram
+
+A histogram is a way to represent the frequency distribution of a variable.
+
+**bin**
+
+
+
+### Bar Chart
+
+A bar chart is commonly used to compare the values of a variable at a given point in time.
+
+
+
+### Scatter Plots
+
+display values pretending two variables against each other, usually it is a dependent variable against an independent variable, in order to determine if there are corr between these two variables.
+
 
 
 

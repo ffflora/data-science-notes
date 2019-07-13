@@ -6,7 +6,8 @@
 
 重点
 
-		1. 每次迭代过程仅优化两个参数，有封闭解
+1. 每次迭代过程仅优化两个参数，有封闭解
+
   		2. 启发式寻找每次优化的两个参数，有效减少迭代次数。
 
 思路：
@@ -16,6 +17,7 @@
 3.  **解释地求解**  两个变量的最优解 α1* , α2*, 并更新至 α 的列表中
 4. 检查更新后的 α 列表是否在某个精度范围内满足 KKT 条件(make sure the algorithm will stop properly)，若不满足，返回（2）
 
+不管 dataset 多大，这个方法都可以用。
 
 
 
@@ -27,14 +29,15 @@
 
 
 
-
-Will check again:
+知识点：
 
 1. Lagrange multiplier
 
    lm 和 svm 的关系/应用
 
 2. **karush-kuhn-Tucker KKT**
+
+   [L1.6 - Inequality-constrained optimization - first-order conditions (KKT conditions)](https://www.youtube.com/watch?v=Nbnd8KxRHGU)
 
 3. 二次规划 quadratic programming
 
@@ -43,4 +46,8 @@ Will check again:
 5. gradient descent 梯度下降法
 
 6. dual problem 对偶问题
+
+[Lecture 12.1 —  Support Vector Machines | Optimization Objective — [ Machine Learning | Andrew Ng]](https://www.youtube.com/watch?v=hCOIMkcsm_g)
+
+​	
 

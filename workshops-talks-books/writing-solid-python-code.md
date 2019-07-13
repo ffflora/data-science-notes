@@ -109,7 +109,7 @@
 
 ### 建议 4：在代码中适当添加注释
 
-```
+```python
 def FuncName(parameter1 , parameter2):
     """Describe what this function does.
     #such as "Find whether the special string is in the queue or not"
@@ -194,212 +194,33 @@ AssertionError: not equals
 
 ### 建议 9：数据交换的时候不推荐使用中间变量
 
-◆ 建议9：数据交换值的时候不推荐使用中间变量
-
-> > 一般情况下Python表达式的计算顺序是从左到右，但遇到表达式赋值的时候表达式右边的操作数先于左边的操作数计算
-
-◆ 建议10：充分利用Lazy evaluation的特性
-
-> > Lazy evaluation
-
-> > 避免不必要的计算，带来性能上的提升。对于Python中的条件表达式if x and y，在x为false的情况下y表达式的值将不再计算。而对于if x or y，当x的值为true的时候将直接返回，不再计算y的值。因此编程中应该充分利用该特性。
-
-> > 因此在编程过程中，如果对于or条件表达式应该将值为真可能性较高的变量写在or的前面，而and则应该推后。
-
-◆ 建议12：不推荐使用type来进行类型检查
-
-> > 不推荐使用type来进行变量类型检查”
-
-> > 基于内建类型扩展的用户自定义类型，type函数并不能准确返回结果。
-
-> > 如果类型有对应的工厂函数，可以使用工厂函数对类型做相应转换，如list(listing)、str(name)等，否则可以使用isinstance()函数来检测
-
-◆ 建议14：警惕eval()的安全漏洞
-
-> > Python中eval()函数将字符串str当成有效的表达式来求值并返回计算结果。
-
-> > “eval is evil”（eval是邪恶的），这是一句广为人知的对eval的评价，它主要针对的是eval()的安全性。
-
-> > 如果使用对象不是信任源
-
-```python
->>> Timer('temp = x; x = y; y = temp;', 'x = 2; y = 3').timeit()
-0.059251302998745814
->>> Timer('x, y = y, x', 'x = 2; y = 3').timeit()
-0.05007316499904846
-```
-
-对于表达式x, y = y, x，在内存中执行的顺序如下：
-
-1. 先计算右边的表达式y, x，因此先在内存中创建元组(y, x)，其标识符和值分别为y, x及其对应的值，其中y和x是在初始化已经存在于内存中的对象
-2. 计算表达式左边的值并进行赋值，元组被依次分配给左边的标识符，通过解压缩，元组第一标识符y分配给左边第一个元素x，元组第二标识符x分配给左边第一个元素y，从而达到交换的目的
-
-下面是通过字节码的分析：
-
-```python
->>> import dis
->>> def swap1():
-...     x = 2
-...     y = 3
-...     x, y = y, x
-... 
->>> def swap2():
-...     x = 2
-...     y = 3
-...     temp = x
-...     x = y
-...     y = temp
-... 
->>> dis.dis(swap1)
-  2           0 LOAD_CONST               1 (2)
-              3 STORE_FAST               0 (x)
-
-  3           6 LOAD_CONST               2 (3)
-              9 STORE_FAST               1 (y)
-
-  4          12 LOAD_FAST                1 (y)
-             15 LOAD_FAST                0 (x)
-             18 ROT_TWO                             # 交换两个栈的最顶层元素
-             19 STORE_FAST               0 (x)
-             22 STORE_FAST               1 (y)
-             25 LOAD_CONST               0 (None)
-             28 RETURN_VALUE
->>> dis.dis(swap2)                                                                                                                                    
-  2           0 LOAD_CONST               1 (2)
-              3 STORE_FAST               0 (x)
-
-  3           6 LOAD_CONST               2 (3)
-              9 STORE_FAST               1 (y)
-
-  4          12 LOAD_FAST                0 (x)
-             15 STORE_FAST               2 (temp)
-
-  5          18 LOAD_FAST                1 (y)
-             21 STORE_FAST               0 (x)
-
-  6          24 LOAD_FAST                2 (temp)
-             27 STORE_FAST               1 (y)
-             30 LOAD_CONST               0 (None)
-             33 RETURN_VALUE
-```
+一般情况下Python表达式的计算顺序是从左到右，但遇到表达式赋值的时候表达式右边的操作数先于左边的操作数计算。
 
 ### 建议 10：充分利用 Lazy evaluation 的特性
 
-```python
-def fib():
-    a, b = 0, 1
-    while True:
-        yield a
-        a, b = b, a + b
-```
+避免不必要的计算，带来性能上的提升。对于Python中的条件表达式 `if x and y`，在x为false的情况下y表达式的值将不再计算。而对于`if x or y`，当x的值为true的时候将直接返回，不再计算y的值。因此编程中应该充分利用该特性。
 
-哈哈哈，我猜到肯定是生成器实现菲波拉契序列的例子，不过对比我写的版本，唉。。。
-
-### 建议 11：理解枚举替代实现的缺陷
-
-利用 Python 的动态特征，可以实现枚举：
-
-```python
-# 方式一
-class Seasons:
-    Spring, Summer, Autumn, Winter = range(4)
-# 方式二
-def enum(*posarg, **keysarg):
-    return type("Enum", (object,), dict(zip(posarg, range(len(posarg))), **keysarg))
-Seasons = enum("Spring", "Summer", "Autumn", Winter=1)
-Seasons.Spring
-# 方式三
->>> from collections import namedtuple
->>> Seasons = namedtuple('Seasons', 'Spring Summer Autumn Winter')._make(range(4))
->>> Seasons.Spring
-0
-# 但通过以上方式实现枚举都有不合理的地方
->>> Seasons._replace(Spring=2)                                             │
-Seasons(Spring=2, Summer=1, Autumn=2, Winter=3)  
-# Python3.4 中加入了枚举，仅在父类没有任何枚举成员的时候才允许继承
-```
+因此在编程过程中，**如果对于or条件表达式应该将值为真可能性较高的变量写在or的前面，而and则应该推后。**
 
 ### 建议 12：不推荐使用 type 来进行类型检查
 
-作为动态语言，Python 解释器会在运行时自动进行类型检查并根据需要进行隐式类型转换，当变量类型不同而两者之间又不能进行隐式类型转换时便抛出TypeError异常。
+基于内建类型扩展的用户自定义类型，type函数并不能准确返回结果。
 
-```python
->>> def add(a, b):
-...     return a + b
-... 
->>> add(1, 2j)
-(1+2j)
->>> add('a', 'b')
-'ab'
->>> add(1, 2)
-3
->>> add(1.0, 2.3)
-3.3
->>> add([1, 2], [3, 4])
-[1, 2, 3, 4]
->>> add(1, 'a')
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "<stdin>", line 2, in add
-TypeError: unsupported operand type(s) for +: 'int' and 'str'
-```
-
-所以实际应用中，我们常常需要进行类型检查，但是不推荐使用type()，因为基于内建类型扩展的用户自定义类型，type()并不能准确返回结果：
-
-```python
-class UserInt(int):
-    def __init__(self, val=0):
-        self._val = int(val)
-    def __add__(self, val):
-        if isinstance(val, UserInt):
-            return UserInt(self._val + val._val)
-        return self._val + val
-    def __iadd__(self, val):
-        raise NotImplementedError("not support operation")
-    def __str__(self):
-        return str(self._val)
-    def __repr__(self):
-        return "Integer %s" % self._val
->>> n = UserInt()
->>> n
-Integer 0
->>> print(n)
-0
->>> m = UserInt(2)
->>> print(m)
-2
->>> type(n) is int
-False                   # 显然不合理
->>> isinstance(n, int)
-True
-```
-
-我们可以使用isinstance来检查：isinstance(object, classinfo)
-
-### 建议 13：尽量转换为浮点类型后再做除法
-
-```python
-# 计算平均成绩绩点
->>> gpa = ((4*96+3*85+5*98+2*70)*4) / ((4+3+5+2)*100)
->>> gpa
-3.625714285714286   # 终于知道自己的绩点是咋算的了
-```
+如果类型有对应的工厂函数，可以使用工厂函数对类型做相应转换，如list(listing)、str(name)等，否则可以使用isinstance()函数来检测: `isinstance(object, classinfo)`
 
 ### 建议 14：警惕 eval() 的安全漏洞
+
+Python中eval()函数将字符串str当成有效的表达式来求值并返回计算结果。
+
+“eval is evil”（eval是邪恶的），这是一句广为人知的对eval的评价，它主要针对的是eval()的**安全性**。
 
 eval(expression[,  globals[, locals]])将字符串 str  当成有效的表达式来求值并返回计算结果，globas为字典形式，locals为任何映射对象，它们分别表示全局和局部命名空间，两者都省略表达式将在调用的环境中执行，为什么需要警惕eval()呢：
 
 ```python
-# 合理正确地使用
->>> eval("1+1==2")
-True
->>> eval('"a"+"b"')
-'ab'
-# 坏心眼的geek
 >>> eval('__import__("os").system("dir")')
 Desktop  Documents  Downloads  examples.desktop  Music  Pictures  Public  __pycache__  Templates  Videos
 0
->>> eval('__import__("os").system("del * /Q")')     # 嘿嘿嘿
+>>> eval('__import__("os").system("del * /Q")')   
 ```
 
 如果确实需要使用eval，建议使用安全性更好的ast.literal_eval。
@@ -440,7 +261,7 @@ def reversed_enumerate(squence):
 
 操作符意义isobject identity==equal
 
-is的作用是用来检查对象的标示符是否一致，也就是比较两个对象在内存中是否拥有同一块内存空间，相当于id(x)  ==  id(y)，它并不适用于判断两个字符串是否相等。==才是用来判断两个对象的值是否相等，实际是调用了内部的__eq__，所以a==b相当于a.__eq__(b)，也就是说==是可以被重载的，而is不能被重载。
+is的作用是用来检查对象的标示符是否一致，也就是比较两个对象在内存中是否拥有同一块内存空间，相当于id(x)  ==  id(y)，它并不适用于判断两个字符串是否相等。==才是用来判断两个对象的值是否相等，实际是调用了内部的__eq__，==所以ab相当于a.__eq__(b)，也就是说==是可以被重载的，而is不能被重载。
 
 ```python
 >>> s1 = 'hello world'

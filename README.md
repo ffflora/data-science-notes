@@ -16,6 +16,10 @@
 
 - [Applied Text Mining in Python](https://github.com/FFFlora/data-science-notes/tree/master/text-mining)
 
+- [Machine Learning with TensorFlow on Google Cloud Platform Specialization](https://github.com/FFFlora/data-science-notes/tree/master/machine-learning-on-gcp-specialization)
+
+- [Data Visualization with Python](https://github.com/FFFlora/data-science-notes/tree/master/data-visualization-with-python)
+
   
 
 ### Books :books:

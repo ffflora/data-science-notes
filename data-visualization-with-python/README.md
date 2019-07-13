@@ -12,7 +12,7 @@ Advanced Visualizations and Geospatial Data
 
 ### Skills will gain
 
-Python Programming, Data Virtualization, Matplotlib
+Python Programming, Data Visualization, Matplotlib
 
 
 

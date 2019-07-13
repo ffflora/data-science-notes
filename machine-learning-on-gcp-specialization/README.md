@@ -1,7 +1,7 @@
 # [Machine Learning with TensorFlow on Google Cloud Platform Specialization](https://www.coursera.org/specializations/machine-learning-tensorflow-gcp)
 
 This is a series of specialization courses from Coursera, which made up with five courses:
-
+[How Google Does Machine Learning](https://github.com/FFFlora/data-science-notes/blob/master/machine-learning-on-gcp-specialization/how-google-does-machine-learning.md)
 
 
 

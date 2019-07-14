@@ -4,6 +4,7 @@ This is a series of specialization courses from Coursera, which made up with fiv
 
 [1. How Google Does Machine Learning](https://github.com/FFFlora/data-science-notes/blob/master/machine-learning-on-gcp-specialization/how-google-does-machine-learning.md)
 
+[2. Launching into Machine Learning](https://github.com/FFFlora/data-science-notes/blob/master/machine-learning-on-gcp-specialization/launching-into-machine-learning.md)
 
 
 

@@ -51,7 +51,27 @@ display values pretending two variables against each other, usually it is a depe
 
 
 
+### Pie Chart
 
+### Box Plots
+
+![](https://datavizcatalogue.com/methods/images/anatomy/box_plot.png)
+
+
+
+### Waffle Charts
+
+Normally created to display progress toward goals.
+
+(more contributions, more tiles)
+
+not provided in `matplotlib`, need to write our own python function.
+
+
+
+### Word Clouds
+
+Depiction od the frequency of different words in some textual data.
 
 
 

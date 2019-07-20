@@ -1514,3 +1514,6 @@ response 里有對應格式的 data
 front-end 要拿著這些 data 展示到 tables、charts 或者其他的 visualization tool 上
 
 [The Big List of DS/ML Interview Resources](https://towardsdatascience.com/the-big-list-of-ds-ml-interview-resources-2db4f651bd63)
+
+[面试题](https://mp.weixin.qq.com/s/E2ziE8wKt4OL9eaKsBmQdg?utm_source=newsletter+subscribers&utm_campaign=07c88b39a4-EMAIL_CAMPAIGN_2019_07_18_09_17&utm_medium=email&utm_term=0_730061d896-07c88b39a4-163092697)
+

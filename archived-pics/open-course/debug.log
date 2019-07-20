@@ -1,0 +1,93 @@
+[0718/225200:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=1
+[0718/231221:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=2
+[0718/232254:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=3
+[0718/232254:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=4
+[0718/232254:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=5
+[0718/232254:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=6
+[0718/232254:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=7
+[0718/232254:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=8
+[0718/233735:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=9
+[0718/233754:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=10
+[0718/233754:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=11
+[0718/233914:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=12
+[0718/233914:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=13
+[0718/233914:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=14
+[0718/234406:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=15
+[0718/234406:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=16
+[0718/234406:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=17
+[0718/234406:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=18
+[0718/234406:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=19
+[0718/234406:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=20
+[0718/234406:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=21
+[0719/013633:INFO:exception_record.cc(518)] [QB]Process ID: 75000 Type: 2
+[0719/013733:INFO:exception_record.cc(518)] [QB]Process ID: 76004 Type: 2
+[0719/013737:INFO:exception_record.cc(518)] [QB]Process ID: 74392 Type: 2
+[0719/014306:WARNING:webmediaplayer_impl.cc(341)] Using MultibufferDataSource
+[0719/015250:INFO:exception_record.cc(518)] [QB]Process ID: 76480 Type: 2
+[0719/015421:FATAL:memory.cc(19)] Out of memory. size=63700992
+Backtrace:
+	CLInfo [0x562663B7+224727]
+	cef_time_to_timet [0x5622E4C1+635473]
+	TerminateProcessWithoutDump [0x57F86261+9117713]
+	GetHandleVerifier [0x575B428D+20217869]
+	GetHandleVerifier [0x575B3F27+20216999]
+	TerminateProcessWithoutDump [0x5822643E+11870702]
+	TerminateProcessWithoutDump [0x58225652+11867138]
+	TerminateProcessWithoutDump [0x5822617A+11869994]
+	TerminateProcessWithoutDump [0x582267C7+11871607]
+	TerminateProcessWithoutDump [0x5822567B+11867179]
+	TerminateProcessWithoutDump [0x582253E8+11866520]
+	TerminateProcessWithoutDump [0x5822768F+11875391]
+	GetHandleVerifier [0x5755D8B4+19863092]
+	GetHandleVerifier [0x5755D79E+19862814]
+	GetHandleVerifier [0x5755D7CF+19862863]
+	CLInfo [0x562417E2+74242]
+	BaseThreadInitThunk [0x75CC8494+36]
+	RtlAreBitsSet [0x778C41C8+136]
+	RtlAreBitsSet [0x778C4198+88]
+
+[0719/015431:INFO:exception_record.cc(518)] [QB]Process ID: 66372 Type: 2
+[0719/020459:WARNING:spdy_session.cc(2455)] Received HEADERS for invalid stream 9
+[0719/105554:WARNING:webmediaplayer_impl.cc(341)] Using MultibufferDataSource
+[0719/155120:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=1
+[0719/155123:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=2
+[0719/155123:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=3
+[0719/155137:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=4
+[0719/155137:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=5
+[0719/155141:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=6
+[0719/155141:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=7
+[0719/155141:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=8
+[0719/155141:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=9
+[0719/155212:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=10
+[0719/155212:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=11
+[0719/155212:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=12
+[0719/155212:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=13
+[0719/155212:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=14
+[0719/155212:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=15
+[0719/155212:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=16
+[0719/155212:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=17
+[0719/155212:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=18
+[0719/155212:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=19
+[0719/155318:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=20
+[0719/155318:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=21
+[0719/155318:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=22
+[0719/155318:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=23
+[0719/155359:INFO:exception_record.cc(518)] [QB]Process ID: 80604 Type: 2
+[0719/155423:WARNING:webmediaplayer_impl.cc(341)] Using MultibufferDataSource
+[0719/155802:WARNING:webmediaplayer_impl.cc(341)] Using MultibufferDataSource
+[0719/163816:WARNING:webmediaplayer_impl.cc(341)] Using MultibufferDataSource
+[0719/163820:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR audio renderer: output device reported an error
+[0719/163851:WARNING:webmediaplayer_impl.cc(341)] Using MultibufferDataSource
+[0719/163853:ERROR:render_media_log.cc(25)] MediaEvent: PIPELINE_ERROR audio renderer: output device reported an error
+[0719/163930:WARNING:webmediaplayer_impl.cc(341)] Using MultibufferDataSource
+[0719/165921:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=1
+[0719/165921:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=2
+[0719/165921:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=3
+[0719/165921:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=4
+[0719/165921:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=5
+[0719/165921:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=6
+[0719/165921:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=7
+[0719/165921:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=8
+[0719/165921:WARNING:audio_sync_reader.cc(132)] AudioSyncReader::Read timed out, audio glitch count=9
+[0719/184108:INFO:exception_record.cc(518)] [QB]Process ID: 82740 Type: 2
+[0719/184637:WARNING:webmediaplayer_impl.cc(341)] Using MultibufferDataSource

@@ -157,3 +157,53 @@ tf.estimator.LinearRegressor
 
 pre-made Estimators
 
+
+
+### Train on large datasets with Dataset API
+
+| problem                          | Solution                             |
+| -------------------------------- | ------------------------------------ |
+| out of memory data               | use the Dataset API                  |
+| Distribution                     | use train_and_evaluate               |
+| Need to evaluate during training | use train_and_evaluate + TensorBoard |
+| Deployments that scales          | use serving input function           |
+
+read one csv file using `tf.data.TextLineDataset(...csv)`
+
+`dataset.shuffle(1000).repeat(15).batch(128)`
+
+All the tf. commands that write in python **do not actually process any data**, they just build **graphs** in memory.
+
+```python
+def input_func():
+	features,label = 
+		dataset.make_one_shot_iterator().get_next()
+	return features, label
+```
+
+1. input functions called only once
+2. input functions return **tf nodes** (not data)
+
+`estimator.train_and_evaluate ` is the preffered method for training real-world model.
+
+distributed training using **data parallelism**
+
+`run_config` tells the estimator where and how often to write checkpoints and tensorboard logs('summaries')
+
+```python
+run_config = tf.estimator.RunConfig(
+	model_dir = output_dir,
+	save_summar_steps = 100,
+	save_checkpoints_steps = 2000
+)
+estimator = tf.estimator.LinearRegression(config = run_config,...)
+```
+
+`TrainSpec` tells the estimator how to get training data
+
+`EvalSpec` controls the evaluation and the checkpoints of the model since they happen at the same time.
+
+`shuffle` very important in distributed training 
+
+
+

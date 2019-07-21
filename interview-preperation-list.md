@@ -1,6 +1,6 @@
 # 数据科学界的《五年高考三年模拟》
 
-## **Python Related**
+## Python Related
 
 1. What modules/libraries are you most familiar with? What do you like or dislike about them?
 
@@ -567,9 +567,7 @@ What are some situations where a general linear model fails?
 
 
 
-20 
-
-Do you think 50 small decision trees are better than a large one? Why?
+20. Do you think 50 small decision trees are better than a large one? Why?
 
 
 
@@ -583,7 +581,56 @@ When modifying an algorithm, how do you know that your changes are an improvemen
 
 Is it better to have too many false positives, or too many false negatives?
 
+23. Why is it important to do the normalization? (特征归一化)
 
+    对数值类型的特征做归一化可以将所有的特征都统一到一个大致相同的数值区间内。最常用的方法主要有以下两种。
+    （1）线性函数归一化（Min-Max Scaling）。它对原始数据进行线性变换，使结果映射到[0, 1]的范围，实现对原始数据的等比缩放。归一化公式如下
+
+    ![](http://latex.codecogs.com/gif.latex?X_%7Bnorm%7D%20%3D%20%5Cfrac%7BX-X_%7Bmin%7D%7D%7BX_%7Bmax%7D%20-%20X_%7Bmin%7D%7D)
+
+    其中X为原始数据，Xmax、Xmin分别为数据最大值和最小值。
+    （2）零均值归一化（Z-Score Normalization）。它会将原始数据映射到均值为0、标准差为1的分布上。具体来说，假设原始特征的均值为μ、标准差为σ，那么归一化公式定义为
+
+    ![](http://latex.codecogs.com/gif.latex?z%20%3D%20%5Cfrac%7Bx-%5Cmu%7D%7B%5Csigma%7D)
+
+    当然，数据归一化并不是万能的。在实际应用中，通过梯度下降法求解的模型通常是需要归一化的，包括线性回归、逻辑回归、支持向量机、神经网络等模型。但对于决策树模型则并不适用，以C4.5为例，决策树在进行节点分裂时主要依据数据集D关于特征x的信息增益比（详见第3章第3节），而信息增益比跟特征是否经过归一化是无关的，因为归一化并不会改变样本在特征x上的信息增益。
+
+24. When doing the data preprocessing, how to deal with the catagorical features?
+
+    - 序号编码 Ordinal Encoding
+      序号编码通常用于处理类别间**具有大小关系的数据**。例如成绩，可以分为低、中、高三档，并且存在`高>中>低` 的排序关系。序号编码会按照大小关系对类别型特征赋予一个数值ID，例如高表示为3、中表示为2、低表示为1，转换后依然保留了大小关系。
+
+    -  独热编码 One-hot Encoding
+      独热编码通常用于处理类别间**不具有大小关系的特征**。例如血型，一共有4个取值（A型血、B型血、AB型血、O型血），独热编码会把血型变成一个4d 稀疏向量，A型血表示为（1, 0, 0, 0），B型血表示为（0, 1, 0, 0），AB型表示为（0, 0,1, 0），O型血表示为（0, 0, 0, 1）。对于类别取值较多的情况下使用独热编码需要注意以下问题:
+      （1）使用 sparse matrix 来节省空间。在 one-hot 下，特征向量只有某一维取值为1，其他位置均为0。因此可以利用向量的稀疏表示有效地节省空间，并且目前大部分的算法均接受稀疏向量形式的输入。
+      （2）配合特征选择来降低维度。高维度特征会带来几方面的问题。一是在 KNN 中，高维空间下两点之间的距离很难得到有效的衡量；二是在逻辑回归模型中，参数的数量会随着维度的增高而增加，容易引起过拟合问题；三是通常只有部分维度是对分类、预测有帮助，因此可以考虑配合特征选择来降低维度。
+    - 二进制编码 Binary Encoding
+      二进制编码主要分为两步，先用序号编码给每个类别赋予一个类别ID，然后将类别ID对应的二进制编码作为结果。以A、B、AB、O血型为例，A型血的ID为1，二进制表示为001；B型血的ID为2，二进制表示为
+      010；以此类推可以得到AB型血和O型血的二进制表示。可以看出，二进制编码本质上是利用二进制对ID进行哈希映射，最终得到0/1特征向量，且维数少于 one-hot，节省了存储空间。
+
+25. what is feature crosses? how to deal with high dimentional feature crosses?
+
+    为了提高复杂关系的拟合能力，在特征工程中经常会把一阶离散特征两两组合，构成高阶组合特征。
+
+    we could use decision tree to conduct feature crosses.
+
+    给定原始输入该如何有效地构造决策树呢？可以采用梯度提升决策树，该方法的思想是每次都在之前构建的决策树的残差上构建下一棵决策树。
+
+26. Give some examples of text models, what are the pros and cons?
+
+    - bag of words and N-gram
+      最基础的文本表示模型是词袋模型。顾名思义，就是将每篇文章看成一袋子词，并忽略每个词出现的顺序。具体地说，就是将整段文本以词为单位切分开，然后每篇文章可以表示成一个长向量，向量中的每一维代表一个单词，而该维对应的权重则反映了这个词在原文章中的重要程度。常用TF-IDF来计算权重，公式为 TF-IDF(t,d)=TF(t,d)×IDF(t) ，其中TF(t,d)为单词t在文档d中出现的频率，IDF(t)是逆文档频率，用来衡量单词t对表达语义所起的重要性，表示为
+
+      ![](http://latex.codecogs.com/gif.latex?IDF%28t%29%20%3D%20%5Cfrac%7Btotal%5C%3Anum%5C%3Aof%20%5C%3Aarticles%20%7D%7Blog%28articles%5C%3A%20that%5C%3Acontains%5C%3At%20&plus;1%29%7D)
+
+      直观的解释是，如果一个单词在非常多的文章里面都出现，那么它可能是一个比较通用的词汇，对于区分某篇文章特殊语义的贡献较小，因此对权重做一定惩罚。
+      将文章进行单词级别的划分有时候并不是一种好的做法，比如英文中的natural language processing（自然语言处理）一词，如果将natural，language，processing这3个词拆分开来，所表达的含义与三个词连续出现时大相径庭。通常，可以将连续出现的n个词（n≤N）组成的词组（N-gram）也作为一个单独的特征放到向量表示中去，构成N-gram模型。另外，同一个词可能有多种词性变化，却具有相似的含义。在实际应用中，一般会对单词进行词干抽取（Word Stemming）处理，即将不同词性的单词统一成为同一词干的形式。
+
+    - topic modeling
+      主题模型用于从文本库中发现有代表性的主题（得到每个主题上面词的分布特性），并且能够计算出每篇文章的主题分布
+    - word embedding and deep learning
+      词嵌入是一类将词向量化的模型的统称，**核心思想是将每个词都映射成低维空间**（通常K=50～300维）上的一个稠密向量（Dense Vector）。K维空间的每一维也可以看作一个隐含的主题，只不过不像主题模型中的主题那样直观。由于词嵌入将每个词映射成一个K维的向量，如果一篇文档有N个词，就可以用一个N×K维的矩阵来表示这篇文档，但是这样的表示过于底层。在实际应用中，如果仅仅把这个矩阵作为原文本的表示特征输入到机器学习模型中，通常很难得到令人满意的结果。因此，还需要在此基础之上加工出更高层的特征。在传统的浅层机器学习模型中，一个好的特征工程往往可以带来算法效果的显著提升。而深度学习模型正好为我们提供了一种自动地进行特征工程的方式，模型中的每个隐层都可以认为对应着不同抽象层次的特征。从这个角度来讲，深度学习模型能够打败浅层模型也就顺理成章了。卷积神经网络和循环神经网络的结构在文本表示中取得了很好的效果，主要是由于它们能够更好地对文本进行建模，抽
+      取出一些高层的语义特征。与全连接的网络结构相比，卷积神经网络和循环神经网络一方面很好地抓住了文本的特性，另一方面又减少了网络中待学习的参数，提高了训练速度，并且降低了过拟合的风险。
 
 ##### 1. What is data Science Engineer?
 
@@ -943,7 +990,7 @@ What are you passionate about?
 
 
 
-##### Storytelling
+### Storytelling
 
 故事叙述虽然听起来和详细描述很相似，但需要你**借助过去的具体经验来突出你的技能**。当你在答题时，你可以指出你之前是否解决过类似的问题。强调相关的经验非常重要，详细描述你曾经解决问题的步骤和特定的成果。可以使用以下类似的句式：
 

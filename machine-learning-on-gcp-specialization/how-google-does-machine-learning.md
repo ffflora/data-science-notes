@@ -14,15 +14,15 @@ It converts examples into knowledge.
 
 A streaming pipeline in addition to a catch pipeline.
 
-![](C:\Users\Flora\Documents\python\data-science-notes\archived-pics\coursera\gcp\pipeline1.png)
+![](https://github.com/FFFlora/data-science-notes/blob/master/archived-pics/coursera/gcp/pipeline1.png)
 
 Sophistication around real-time data is key
 
-![](C:\Users\Flora\Documents\python\data-science-notes\archived-pics\coursera\gcp\pipeline2.png)
+![](https://github.com/FFFlora/data-science-notes/blob/master/archived-pics/coursera/gcp/pipeline2.png)
 
 ### Avoid these 10 ML pitfall:
 
-![](C:\Users\Flora\Documents\python\data-science-notes\archived-pics\coursera\gcp\secret-sauce.png)
+![](https://github.com/FFFlora/data-science-notes/blob/master/archived-pics/coursera/gcp/secret-sauce.png)
 
 The value of ML comes along the way.
 

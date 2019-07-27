@@ -12,15 +12,13 @@ If the data is not labeled, have to **cluster** the data to find some interestin
 
 #### Regression and Classification
 
-Regression: 
-
-​	For predicting continuous label values.
+Regression:  
+- For predicting continuous label values.  
 
 Classification:  
 
-​	For predicting categorical label values. To create **decision boundaries**. 
-
-​	Minimize the error between  predicted class and labels class. Usually done by **cross entropy**.
+- For predicting categorical label values. To create **decision boundaries**.  
+- Minimize the error between  predicted class and labels class. Usually done by **cross entropy**.
 
 ​	([简单的交叉熵损失函数，你真的懂了吗？](https://zhuanlan.zhihu.com/p/38241764))
 
@@ -52,13 +50,13 @@ a multi-layer perceptron.
 
 In the Neuron system: 3 steps:
 
-​	weighted sum, sigmoid function, hidden inputs.
+- weighted sum, sigmoid function, hidden inputs.
 
 Common activation functions: 
 
-​	linear =*f(x)=x*
+- linear =*f(x)=x*
 
-​	Sigmoid = ![](http://latex.codecogs.com/gif.latex?%5Csigma%28x%29%20%3D%20%5Cfrac%7B1%7D%7B1&plus;e%5E%7B-x%7D%7D)
+	Sigmoid = ![](http://latex.codecogs.com/gif.latex?%5Csigma%28x%29%20%3D%20%5Cfrac%7B1%7D%7B1&plus;e%5E%7B-x%7D%7D)
 
 ​	![](http://latex.codecogs.com/gif.latex?tanh%28x%29%20%3D%20%5Cfrac%7B2%7D%7B1&plus;e%5E%7B-2x%7D%7D-1)
 
@@ -106,11 +104,11 @@ calculate slope to set direction for the learning rate.
 
 A typical loss curve
 
-![](C:\Users\Flora\Documents\python\data-science-notes\archived-pics\coursera\gcp\loss-ideal.png)
+![](https://github.com/FFFlora/data-science-notes/blob/master/archived-pics/coursera/gcp/loss-ideal.png)
 
 Bad loss curve (step size too big)
 
-![](C:\Users\Flora\Documents\python\data-science-notes\archived-pics\coursera\gcp\bad-loss.png)
+![](https://github.com/FFFlora/data-science-notes/blob/master/archived-pics/coursera/gcp/bad-loss.png)
 
 Hyperparameter tuning
 
@@ -159,7 +157,7 @@ small dataset, use cross-validation
 
 
 
-##  Using ==HASH== of date to ==split the data== 
+##  Using HASH of date to split the data 
 
 ```sql
 compute_alpha = """

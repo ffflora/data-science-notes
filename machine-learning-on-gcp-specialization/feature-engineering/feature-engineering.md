@@ -111,15 +111,15 @@ There are two places for feature creation in TensorFlow:
 
 Beam is a way to write elastic data preprocess pipelines.
 
-![](C:\Users\Flora\Documents\python\data-science-notes\archived-pics\coursera\gcp\beam-dataflow.png)
+![](https://github.com/FFFlora/data-science-notes/blob/master/archived-pics/coursera/gcp/beam-dataflow.png)
 
-![](C:\Users\Flora\Documents\python\data-science-notes\archived-pics\coursera\gcp\beam-dataflow2.png)
+![](https://github.com/FFFlora/data-science-notes/blob/master/archived-pics/coursera/gcp/beam-dataflow2.png)
 
 #### Dataflow terms and concepts:
 
 source; series of steps to transform; sink (out) 
 
-![](C:\Users\Flora\Documents\python\data-science-notes\archived-pics\coursera\gcp\beam-dataflow3.png)
+![](https://github.com/FFFlora/data-science-notes/blob/master/archived-pics/coursera/gcp/beam-dataflow3.png)
 
 #### A pipeline is a DAG of steps.
 
@@ -129,7 +129,7 @@ Can branch, merge, use if-then statement etc
 
 `p.run()` runs the pipeline 
 
-![](C:\Users\Flora\Documents\python\data-science-notes\archived-pics\coursera\gcp\beam-dataflow4.png)
+![](https://github.com/FFFlora/data-science-notes/blob/master/archived-pics/coursera/gcp/beam-dataflow4.png)
 
 
 
@@ -143,9 +143,9 @@ have some domain knowledge
 
 when get a new dataset, do EDA, find outliers, see the frequent of the variables, analyze key stats (avg, min,max,...), explore the distributions of the values. 
 
-![](C:\Users\Flora\Documents\python\data-science-notes\archived-pics\coursera\gcp\preprocessing.png)
+![](https://github.com/FFFlora/data-science-notes/blob/master/archived-pics/coursera/gcp/preprocessing.png)
 
-![](C:\Users\Flora\Documents\python\data-science-notes\archived-pics\coursera\gcp\dataPrep.png)
+![](https://github.com/FFFlora/data-science-notes/blob/master/archived-pics/coursera/gcp/dataPrep.png)
 
 
 
@@ -159,9 +159,9 @@ using non-linear inputs in a linear learner
 
 #### discretization:
 
-![](C:\Users\Flora\Documents\python\data-science-notes\archived-pics\coursera\gcp\discretization.png)
+![](https://github.com/FFFlora/data-science-notes/blob/master/archived-pics/coursera/gcp/discretization.png)
 
-![](C:\Users\Flora\Documents\python\data-science-notes\archived-pics\coursera\gcp\discretization2.png)
+![](https://github.com/FFFlora/data-science-notes/blob/master/archived-pics/coursera/gcp/discretization2.png)
 
 #### Memorization vs. Generalization
 

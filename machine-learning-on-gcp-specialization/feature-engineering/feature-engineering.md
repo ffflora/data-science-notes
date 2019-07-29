@@ -165,7 +165,7 @@ using non-linear inputs in a linear learner
 
 #### Memorization vs. Generalization
 
-seperate prediction per grid cell
+separate prediction per grid cell
 
 if you one-hot encode one set of value x1, then one-hot encode the second set of value x2, and then feature cross them, you're essentially left with one node that fires for points that fall into that bucket.(eg. `x3 = 1 iff x1 =1 and x2 =1`)
 
@@ -176,4 +176,38 @@ Discretization: you discretize the input space, and **memorize** the training da
 **Feature crosses memorize, goal of ML is generalization.** 
 
 memorization works when you have lots of data.
+
+Feature crosses bring a lot of power to **linear models**:
+
+- feature crosses + massive data is an efficient way for learning highly complex spaces
+- feature crosses allow a linear model to memorize large dataset
+- optimizing linear model is a **convex** problem
+- before TensorFlow, google used massive scale learners
+- feature crosses as a preprocessor, make NN converge faster 
+
+Feature Crosses lead to sparse matrix
+
+Feature crosses can't have too much of a good thing. be aware of overfitting.
+
+FC contribute much less than the original inputs.
+
+### Implementing Feature Crosses
+
+the #of hash buckets controls sparsity and collisions.
+
+choose the number of hash buckets is an art, not science.
+
+high hash_buckets -> very sparse.
+
+#### Embedding feature crosses
+
+the weights in the embedding col are **learned from data**.
+
+#### Three Possible places to do feature engineering:
+
+- Dataflow + TensorFlow (tf.transfrom)
+- Dataflow ( if Dataflow is part of your prediction runtime also)
+- TensorFlow feature_column input_fn
+
+
 

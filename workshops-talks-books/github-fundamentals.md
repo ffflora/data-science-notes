@@ -53,5 +53,5 @@ EditorConfig
 
 `git@github.com:username/project_name.git` 这种是 SSH address
 
-`git remote add origin ssh add....`  for new repo
+`git remote add origin sshaddress....`  for new repo
 

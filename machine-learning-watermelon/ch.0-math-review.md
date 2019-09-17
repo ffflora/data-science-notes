@@ -11,3 +11,10 @@
 3. norm 
 
    By definition, a vector norm is a measure for the size of a vector. 
+
+## Calculus
+
+1. derivatives:
+   - chain rule, 神经网络反向传播的基础
+   - 梯度下降法，最简单的优化方法 gradient
+

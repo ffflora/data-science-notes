@@ -126,3 +126,56 @@
      
    - 在机器学习领域，被俗称为距离，却不满足三条距离公理的不仅仅有余弦距离，还有KL距离（Kullback-Leibler  Divergence），也叫作相对熵，它常用于计算两个分布之间的差异，但不满足对称性和三角不等式.
 
+
+
+7. ###  A/B Test 
+
+   - #### 在对模型进行过充分的离线评估之后，为什么还要进行在线A/B测试？
+
+     （1）离线评估**无法完全消除模型过拟合的影响**，因此，得出的离线评估结果无法完全替代线上评估结果。
+
+     （2）离线评估**无法完全还原线上的工程环境**。一般来讲，离线评估往往不会考虑线上环境的延迟、数据丢失、标签数据缺失等情况。因此，离线评估的结果是理想工程环境下的结果。
+
+     （3）线上系统的**某些商业指标在离线评估中无法计算**。离线评估一般是针对模型本身进行评估，而与模型相关的其他指标，特别是商业指标，往往无法直接获得。比如，上线了新的推荐算法，离线评估往往关注的是ROC曲线、P-R曲线等的改进，而线上评估可以全面了解该推荐算法带来的用户点击率、留存时长、PV访问量等的变化。这些都要由A/B测试来进行全面的评估。
+
+   - #### 如何进行线上A/B测试？
+
+     进行A/B测试的主要手段是进行用户**分桶**，即将用户分成实验组和对照组，对实验组的用户施以新模型，对对照组的用户施以旧模型。在分桶的过程中，要注意样本的独立性和采样方式的**无偏性**，**确保同一个用户每次只能分到同一个桶中**，在分桶过程中所选取的user_id需要是一个**随机数**，这样才能保证桶中的样本是无偏的。
+
+8. ### Model Evaluation
+
+   - #### 模型评估过程中，有哪些主要的验证方法，它们的优缺点是什么?
+
+     - Holdout validation, cross validation, bootstrap, differentiation 
+     - Holdout: test set and training set, usually 3:7. 
+       - 验证集上计算出来的最后评估指标与原始分组有很大关系。
+       - to avoid this problem, we introduce the cross validation ↓
+     - Cross Validation: k-fold validation.
+       - divide the dataset into k sets, traverse each set and set the current set as validation set and make the rest as training set, and take the average of the k predicted value as the final result.  
+       - hold one out as a test set 
+     - Bootstrap: When dataset is small, this method is better than the previous two, cause when dividing "validation set"out from the dataset, would make the training set even smaller, thus effect the accuracy to the final result.
+       - 对于总数为n的样本集合，进行n次有放回的随机抽样，得到大小为n的训练集。n次采样过程中，有的样本会被重复采样，有的样本没有被抽出过，将这些没有被抽出的样本作为验证集，进行模型验证，这就是自助法的验证过程。
+
+   - #### 自助法的采样过程中，对n个样本进行n次自助抽样，当n趋于无穷大时，最终有多少数据从未被选择过?
+
+     - 一个样本在一次抽样过程中未被抽中的概率为(1-1/n), n次抽样均未抽中的概率为![](https://www.zhihu.com/equation?tex=%5Cleft%281-%5Cfrac%7B1%7D%7Bn%7D%5Cright%29%5E%7Bn%7D). when n --> ∞, p = ![](https://www.zhihu.com/equation?tex=%5Clim+_%7Bn+%5Crightarrow+%5Cinfty%7D%5Cleft%281-%5Cfrac%7B1%7D%7Bn%7D%5Cright%29%5E%7Bn%7D%3D%5Cmathrm%7Be%7D),![](https://www.zhihu.com/equation?tex=%5Cbegin%7Baligned%7D+%5Clim+_%7Bn+%5Crightarrow+%5Cinfty%7D%5Cleft%281-%5Cfrac%7B1%7D%7Bn%7D%5Cright%29%5E%7Bn%7D+%26%3D%5Clim+_%7Bn+%5Crightarrow+%5Cinfty%7D+%5Cfrac%7B1%7D%7B%5Cleft%281%2B%5Cfrac%7B1%7D%7Bn-1%7D%5Cright%29%5E%7Bn%7D%7D+%5C%5C+%26%3D%5Cfrac%7B1%7D%7B%5Clim+_%7Bn+%5Crightarrow+%5Cinfty%7D%5Cleft%281%2B%5Cfrac%7B1%7D%7Bn-1%7D%5Cright%29%5E%7Bn-1%7D%7D+%5Ccdot+%5Cfrac%7B1%7D%7B%5Clim+_%7Bn+%5Crightarrow+%5Cinfty%7D%5Cleft%281%2B%5Cfrac%7B1%7D%7Bn-1%7D%5Cright%29%7D+%5C%5C%3D%26+%5Cfrac%7B1%7D%7B%5Cmathrm%7Be%7D%7D+%5Capprox+0.368+%5Cend%7Baligned%7D)
+
+9. ### Hyperparameter Tuning
+
+   - #### 参数有哪些调优方法？
+
+     - 一般会采用**网格搜索、随机搜索、贝叶斯优化**等算法。
+
+     - 需要明确超参数搜索算法一般包括哪几个要素：一是目标函数，即算法需要最大化/最小化的目标；二是搜索范围，一般通过上限和下限来确定；三是算法的其他参数，如搜索步长:learning rate。
+
+     - **网格搜索**
+
+       网格搜索可能是最简单、应用最广泛的超参数搜索算法，它通过查找搜索范围内的所有的点来确定最优值。如果采用较大的搜索范围以及较小的步长，网格搜索有很大概率找到全局最优值。然而，这种搜索方案**十分消耗计算资源和时间**，特别是需要调优的超参数比较多的时候。因此，在实际应用中，网格搜索法<u>一般会先使用较广的搜索范围和较大的步长，来寻找全局最优值可能的位置；然后会逐渐缩小搜索范围和步长，来寻找更精确的最优值。这种操作方案可以降低所需的时间和计算量，但由于目标函数一般是非凸的，所以很可能会错过全局最优值。</u>
+
+     - **随机搜索**
+
+       随机搜索的思想与网格搜索比较相似，只是不再测试上界和下界之间的所有值，而是在搜索范围中随机选取样本点。它的理论依据是，如果样本点集足够大，那么通过随机采样也能大概率地找到全局最优值，或其近似值。随机搜索一般会比网格搜索要快一些，但是和网格搜索的快速版一样，它的结果也是没法保证的。
+
+     - **贝叶斯优化算法**
+
+       贝叶斯优化算法在寻找最优最值参数时，采用了与网格搜索、随机搜索完全不同的方法。网格搜索和随机搜索在测试一个新点时，会忽略前一个点的信息；而贝叶斯优化算法则充分利用了之前的信息。贝叶斯优化算法通过对目标函数形状进行学习，找到使目标函数向全局最优值提升的参数。具体来说，它学习目标函数形状的方法是，**首先根据先验分布，假设一个搜集函数；然后，每一次使用新的采样点来测试目标函数时，利用这个信息来更新目标函数的先验分布；最后，算法测试由后验分布给出的全局最值最可能出现的位置的点。**对于贝叶斯优化算法，有一个需要注意的地方，一旦找到了一个局部最优值，它会在该区域不断采样，**所以很容易陷入局部最优值**。为了弥补这个缺陷，贝叶斯优化算法会在探索和利用之间找到一个平衡点，“探索”就是在还未取样的区域获取采样点；而“利用”则是根据后验分布在最可能出现全局最值的区域进行采样。

@@ -97,6 +97,32 @@
 
    - #### 余弦距离是否是一个严格定义的距离?
 
-     - 首先看距离的定义：在一个集合中，如果每一对元素均可唯一确定一个实数，使得三条距离公理（正定性，对称性，三角不等式）成立，则该实数可称为这对元素之间的距离。余弦距离满足正定性和对称性，但是不满足三角不等式，因此它并不是严格定义的距离。具体来说，对于向量A和B，三条距离公理的证明过程如下。
+     - 首先看距离的定义：在一个集合中，如果每一对元素均可唯一确定一个实数，使得三条距离公理（**正定性 positive definite，对称性 symetric ，三角不等式 triangle inequality**）成立，则该实数可称为这对元素之间的距离。余弦距离满足正定性和对称性，但是不满足三角不等式，因此它并不是严格定义的距离。具体来说，对于向量A和B，三条距离公理的证明过程如下。
 
        ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/1d94e5903f7936d3c131e040ef2c51b473dd071d)
+       
+     - ##### 正定性 positive definite:
+     
+       - By definition, ![](https://img-blog.csdnimg.cn/20181124203942738.png),  since ![](https://img-blog.csdnimg.cn/20181124204025313.png), thus `dist(A,B)≥0` always holds.
+       - Particularly, ![](https://img-blog.csdnimg.cn/20181124204104815.png)
+     
+     - ##### Symetric
+     
+       - By def, ![](https://img-blog.csdnimg.cn/20181124204142302.png)
+     
+     - ##### Triangle Ineuqality:
+     
+       - This **doesn't** hold. 
+     
+       - counterexample: 
+     
+         - A=(1,0), B=(1,1), C=(0,1), Thus ![](https://img-blog.csdnimg.cn/201811242042205.png)
+     
+           ![](https://img-blog.csdnimg.cn/20181124204230762.png), ![](https://img-blog.csdnimg.cn/2018112420424266.png),
+     
+           Therefore, ![](https://img-blog.csdnimg.cn/20181124204256125.png)
+     
+         - Which the triangle inequality doesn't hold.
+     
+   - 在机器学习领域，被俗称为距离，却不满足三条距离公理的不仅仅有余弦距离，还有KL距离（Kullback-Leibler  Divergence），也叫作相对熵，它常用于计算两个分布之间的差异，但不满足对称性和三角不等式.
+

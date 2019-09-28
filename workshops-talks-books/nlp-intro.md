@@ -15,7 +15,7 @@ NLP, a field of intersection of
   - Large vocabulary, encoding of words makes sparse matrix, which is hard for NLP models to learn anything. 
 - Ambiguity 
   - white house vs White House
-  - I saw her duck (v. 蹲下)
+  - I saw her duck (v. 蹲下) 
   - Language Model 可以解决这个问题
 - i18n (internationalization)
   - 中文分词 
@@ -24,17 +24,20 @@ NLP, a field of intersection of
 
 - part of speech (POS)
   - book (n,v), record (n,v)
-- Polysemy (一词多义)
+- Po'lysemy (一词多义): one word that has different meaning
   - bank, spring
-- phrase ≠ Σ words
+- ★phrase ≠ Σ words 
   - make + up ≠ make up
+  - 2 + 2 ≠ 2 + 2
   - The + United + Sates ≠ The United Sates 
 - （以上问题在很多模型里都可以自动被解决, Bert）
 - Language is evolving 
   - Faceversary 
-  - 解决方法：the models needed to be updated frequently.
+  - Solutions: the models needed to be updated frequently.
 
 ### Tokenization
+
+**Def**.
 
 - English 
   - Punctuation splitting (, . space)
@@ -48,9 +51,11 @@ NLP, a field of intersection of
 
 Features
 
-- the number of features (words) is large enough
+- the number of features (words) is large enough 
 
 Word Embedding (ex 通过50个数字来描述一个单词) use vector to represent a word
+
+why do we need word embedding?****
 
 - Word2vec
 - GloVe
@@ -58,8 +63,13 @@ Word Embedding (ex 通过50个数字来描述一个单词) use vector to represe
 
 [Embedding projector](https://projector.tensorflow.org/)
 
-Word Embedding 保留了semantic的信息（单词具体的意思，词义），还有极性的信息( female or male, positive or negative)
+Word Embedding keep semantic meaning（单词具体的意思，词义），还有极性的信息( female or male, positive or negative) 
 
 ### NLP Pipeline
 
 ![](https://raw.githubusercontent.com/ffflora/data-science-notes/master/archived-pics/open-course/nlp.png)
+
+stemming vs lemmatization
+
+
+

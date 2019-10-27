@@ -1,7 +1,5 @@
 # Customer Churns Analysis and Digital Marketing in Data Science 
 
-# 电信用户流失分析与数字营销中的数据科学
-
 ### CRISP-DM: Cross Industry Standard Process for Data Mining
 
 - Business Understanding

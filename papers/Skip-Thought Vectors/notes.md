@@ -1,3 +1,11 @@
+# Pre-knowledge Reserve
+
+Sentence representation
+
+Bag of words representation
+
+Sen2Vec/Doc2Vec
+
 # Some highlights of the paper
 
 Instead of using a word to predict its surrounding context, this model encode a sentence to predict the sentences around it. The model depends on having a training corpus of contiguous text.  
@@ -20,7 +28,7 @@ SIF
 
 #### NN Language Model based sentence representation
 
-uses unsupervised text corpus, and uses the co-occurrence between the words (共现信息), could be trained massively. 
+uses unsupervised text corpus, and uses the co-occurrence between the words (共现信息), could be trained in large scale corpus. 
 
 **Pro**: uses unsupervised corpus, low in cost; uses language model to learn information
 
@@ -42,14 +50,32 @@ There are good resources of paraphrase sentences corpus out there, and they are 
 
 #### Skip-thought
 
-uses the massive unsupervised corpus to model the relationship/connection between the sentences. 
+uses the large scale unsupervised corpus to model the relationship/connection between the sentences. 
 
+---
 
+## Motivation
 
-# Pre-knowledge Reserve
+Bert is also an application of sentence representation tool.
 
-Sentence representation
+Between the sentences, there are always sematic connections, is it possible to predict **one** sentence before and after the **center sentence**? 
 
-Bag of words representation
+### Skip-Gram
 
-Sen2Vec/Doc2Vec
+For example, there are some words:
+
+<u>like deep</u> **learning** <u>and NLP</u>
+
+which **learning** is the center word, <u>like deep</u>  and <u>and NLP</u> are the output context words. 
+
+**Skip-thought** uses the same idea, the only difference is that the subject here is sentence level instead of word level.
+
+## Conclusion 
+
+Innovation of this paper:
+
+1. It provides a new method for sentence representation, which it
+   - considered the relationships between sentences, and 
+   - it uses unsupervised corpus
+2. it proves that there exist a model, such that if it has been trained **once**, it could be uses for **multiple** times.
+3. The experiments' results are in great detail, which helps for later research.

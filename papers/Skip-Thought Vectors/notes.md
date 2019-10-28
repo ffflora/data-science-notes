@@ -12,7 +12,7 @@ Instead of using a word to predict its surrounding context, this model encode a 
 
 The model treat skip-thoughts in the framework of encoder-decoder models. That is, an encoder maps words to a sentence vector and a decoder is used to generate the surrounding sentences.  
 
-Since the goal is to evaluate skip-thoughts as a general feature extractor, we keep text pre-processing to a minimum.   When encoding new sentences, no additional preprocessing is done other than basictokenization. This is done to test the robustness of our vectors. 
+Since the goal is to evaluate skip-thoughts as a general feature extractor, we keep text pre-processing to a minimum.   When encoding new sentences, no additional preprocessing is done other than basic tokenization. This is done to test the robustness of our vectors. 
 
 ### Sentence Representation
 
@@ -79,3 +79,4 @@ Innovation of this paper:
    - it uses unsupervised corpus
 2. it proves that there exist a model, such that if it has been trained **once**, it could be uses for **multiple** times.
 3. The experiments' results are in great detail, which helps for later research.
+

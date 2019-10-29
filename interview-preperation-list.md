@@ -56,11 +56,18 @@
 
 6. [**Data Science Python Interview Questions and Answers**](https://www.dezyre.com/article/100-data-science-in-python-interview-questions-and-answers-for-2018/188)
 
-7. review your python learning notes from time to time, you'll always find useful points! 
+   
 
-   mynote
 
  
+
+1. What will be the output of the code below? 
+   - list = [‘a’, ‘b’, ‘c’, ‘d’, ‘e’]
+   - print list[10:]
+
+1. As Everything in Python is an Object, Explain the characteristics of Python’s Objects.
+2. What is a Python Module?
+3. What is a Class? How do you create it in Python?
 
 
 
@@ -635,8 +642,8 @@ Is it better to have too many false positives, or too many false negatives?
 27. Why vector representation is much faster?  
 
 举例机器学习中最常见的线性回归拟合函数y=wx+b，在实际的问题场景中，x的维度很可能是成百上千个，如果使用传统的方法，将会面对求解成百上千个方程的巨大苦难，这是很难实现的。但是如果使用向量的表示方式，将传统的代数形式映射到向量空间来进行解决，则可以的用矩阵的形式表示出成百上千个维度， 同时也可以快速的进行求解 
- 
- 
+
+
 ##### 1. What is data Science Engineer?
 
 > 在大数据时代，数据工程师的角色愈发地重要。也许，数据架构师的称谓更准确。和数据分析师不同，他们不太关注统计、分析技能、建模等。他们的工作重点在于数据架构、计算、数据存储、数据流等。  因此，数据工程师必须具备相当强的编程能力—包括编写数据查询程序的能力。也就是说，他们的能力必须达到开发运营高手的级别。

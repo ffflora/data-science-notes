@@ -49,4 +49,5 @@
 ### Podcasts:
 
 - [Super Data Science Podcast :headphones:](https://www.superdatascience.com/podcast)
+- [吴军的谷歌方法论](https://www.youtube.com/watch?v=YLENZaoMicI&list=PLsIONjqUYn2dGjZebe6TJaeQClKEUfPSk&index=2)
 

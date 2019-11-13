@@ -12,7 +12,7 @@ If we connect many neurons like these, we have a neuron network.
 
 The geometric meaning of perceptron:
 
-![](C:\Users\Flora\Documents\python\data-science-notes\archived-pics\open-course\perceptron.png)
+![](https://raw.githubusercontent.com/ffflora/data-science-notes/master/archived-pics/open-course/perceptron.png)
 
 (The separating hyperplane separates the data to two sets: positive and negative.)
 

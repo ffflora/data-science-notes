@@ -1,5 +1,7 @@
 # 数据科学界的《五年高考三年模拟》
 
+![技能的连续统一性](https://www.dataapplab.com/wp-content/uploads/2019/05/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190523092104.jpg)
+
 ## Python Related
 
 1. What modules/libraries are you most familiar with? What do you like or dislike about them?
@@ -59,7 +61,7 @@
    
 
 
- 
+
 
 1. What will be the output of the code below? 
    - list = [‘a’, ‘b’, ‘c’, ‘d’, ‘e’]
@@ -644,81 +646,14 @@ Is it better to have too many false positives, or too many false negatives?
 举例机器学习中最常见的线性回归拟合函数y=wx+b，在实际的问题场景中，x的维度很可能是成百上千个，如果使用传统的方法，将会面对求解成百上千个方程的巨大苦难，这是很难实现的。但是如果使用向量的表示方式，将传统的代数形式映射到向量空间来进行解决，则可以的用矩阵的形式表示出成百上千个维度， 同时也可以快速的进行求解 
 
 
-##### 1. What is data Science Engineer?
-
-> 在大数据时代，数据工程师的角色愈发地重要。也许，数据架构师的称谓更准确。和数据分析师不同，他们不太关注统计、分析技能、建模等。他们的工作重点在于数据架构、计算、数据存储、数据流等。  因此，数据工程师必须具备相当强的编程能力—包括编写数据查询程序的能力。也就是说，他们的能力必须达到开发运营高手的级别。
->
-> 数据工程师还负责数据库设计，数据仓储，建立数据湖。 这就意味着，他们必须十分熟悉现有的数据库技术和数据管理系统，比如和大数据有关的Hadoop与HBase 等。
->
-> 此外，非功能性的基础设施问题，如数据的可扩展性、可靠性、韧性、有效性，备份等也由数据工程师来负责。
-
-keywords: 
-
-- manage data pipelines for large datasets 
-- make sure the data is being  **efficiently collected** and **retrieved** from its source when **needed, cleaned and preprocessed**.
-
-Data Pipeline:
-
-- In order to conquer the challenges, distributed system is a must.
-  - Able to handle large pressure
-  - Higher chance of failure
-- Designing for the whole company 
-  - High scalability ready future growth //保证系统有高扩展性 
-  - Be genetic enough to support different teams 
-
-[**科技巨头都爱的Data Pipeline，如何自动化你的数据工作？**](http://www.raincent.com/content-10-10786-1.html)
-
-[ETL best practices with Airflow documentation site](http://www.raincent.com/content-10-10786-1.html)
-
-Why Important:
-
-如果你只使用存储在.csv或.txt文件中的相对较小的（<5GB）数据集，可能很难理解为什么会有 Full Time 来构建和维护 Data Pipeline。这有两个原因：1）一个50GB的数据集不适合你的计算机的RAM，所以你通常需要其他方法将其输入到你的模型中；2）许多数据可能需要很长的时间来处理，并且通常需要冗余存储。管理存储需要专门的技术知识。
-
-Requirements:
-
-Apache Spark, Hadoop, Hive & Kafka. SQL 的夯实基础也很重要的。
-
-你要处理的问题大概是这样：
-
-→ “How do I build a pipeline that can handle 10000 requests per minute?”
-
-→ “How can I clean this dataset without loading it all in RAM?”
 
 [How to Work with BIG Datasets on Kaggle Kernels (16G RAM)](https://www.kaggle.com/yuliagm/how-to-work-with-big-datasets-on-16g-ram-dask)
 
 
 
-![技能的连续统一性](https://www.dataapplab.com/wp-content/uploads/2019/05/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190523092104.jpg)
 
-[达观数据：Selenium使用技巧与机器人流程自动化实战](https://zhuanlan.zhihu.com/p/64892225)
 
-[RPA流程自动化机器人专栏](https://zhuanlan.zhihu.com/RPA2018)
-
-Server Related:
-
-How to scale web service(with AWS)?
-
-Techniques to make distributed system highly available?
-
-Analytics Related:
-
-SQL
-
-Optimize Hive query
-
-Distribution System related:
-
-Data replication strategies
-
-Message delivery guarantees
-
-Cloud computing related:
-
-How to sync data across S3 buckets in different AWS account?
-
-[到底什么是流计算（Stream Computing）](https://blog.csdn.net/historyasamirror/article/details/3719710)
-
-##### 2. Useful Toolkits:
+##### 1. Useful Toolkits:
 
 - Libraries and Packages: 
   - Python: Scikit-learn, Pandas, Numpy, TensorFlow, Matplotlib, D3, Ploty
@@ -1576,3 +1511,36 @@ front-end 要拿著這些 data 展示到 tables、charts 或者其他的 visuali
 
 [面试题](https://mp.weixin.qq.com/s/E2ziE8wKt4OL9eaKsBmQdg?utm_source=newsletter+subscribers&utm_campaign=07c88b39a4-EMAIL_CAMPAIGN_2019_07_18_09_17&utm_medium=email&utm_term=0_730061d896-07c88b39a4-163092697)
 
+](https://vinta.ws/code/feature-engineering.html)
+
+##### 5. What is selection bias?
+
+##### 6. What is imbalanced class?
+
+
+
+##### 7. The goal of data science and what are the deliverables?
+
+1) 根据投入预测回报: ROI forecast
+
+2) 分类（例：是否为垃圾信息？）Classification
+
+3) 推荐（例：亚马逊（Amazon）和奈飞（Netflix）的服务模式）Recommendation System
+
+4) 模式鉴别的分类: Classification of pattern identification
+
+5) 异常检测（例：欺诈侦测）fraud detectation
+
+6) 面部,图像,文字,声音，录像识别 face/image/voice recognation
+
+7) 可行性洞见（actionable insights）（例：通过控制界面、报告、可视化图像呈现。）
+
+8) 自动化流程和决策（例：信用卡审批）Automated process 
+
+9) 打分和排列（例：费寇分数(FICO score)的核算）Rating and ordering
+
+10) 分割方案（例：基于人口统计学特征的市场营销）
+
+11) 优化方案（例：风险管理）
+
+12) 预测（例：营业额和销售额）prediction

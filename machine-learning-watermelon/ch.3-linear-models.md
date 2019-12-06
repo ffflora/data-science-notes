@@ -110,7 +110,22 @@ Why is this bad?
 
 - **AdaBoost**: Adaptive Boosting 
 
-  
+
+---
+
+### Code:
+
+All the linear models from `scikit-learn` are in `linear_model`
+
+```python
+from sklearn import linear_model # when dataset not too large
+
+LinearRegression() 
+Ridge()
+Lasso()
+```
+
+
 
 ----
 

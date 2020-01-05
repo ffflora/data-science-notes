@@ -1,3 +1,5 @@
+Data is increasingly being considered an important asset within organization.
+
 ### BA
 
 Oversee every process in typical E-commerce to look out for potential issues, problems and potential for optimization to boost the business performance.
@@ -56,9 +58,19 @@ Oversee every process in typical E-commerce to look out for potential issues, pr
 
 
 
+---
 
+## Business Analytics Interview Question
 
+1. ##### What is analytics?
 
+   Analytics is the scientific process of transforming data into insights for better decisions. It helps recognize patterns, insights, trends within data and thus help organizations make more informed decisions. Organizations now are sitting on a huge amount of data. 
+
+2. ##### How is analytics used within ecommerce and marketing?
+
+   Ecommerce sites utilize analytics heavily to make day-to-day decisions. Analytics evaluates visitor's data in order to make recommendations and suggest products that might interest costumers. This allows for a great cross-sell opportunity: recommendation system. Also, using the information gleaned from specialized analytics, ads being displayed on various sites and search engines can be customized to appeal to specific visitors. Websites rely heavily on visitor's browsing patterns to come up with site design that could more effectively entice visitors to remain on site. 
+
+   Also, every time a customer performs a transaction, makes a retail purchase, visit a website, clicks a link/ads, a data point is created. 
 
 ---
 

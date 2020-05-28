@@ -62,7 +62,7 @@ WHERE prod_price IS NULL;
 ### More filtering 
 - Use `AND` and `OR` operator
 - `WHERE` clause could use with many `AND` or `OR`
-- Usually `AND` has more priority than `OR`, therefore use parentheses in `WHERE` clause with these operators, which could remove all the ambiguity.
+- Usually `AND` has a higher priority than `OR`, therefore use parentheses in `WHERE` clause with these operators, which could remove all the ambiguity.
 - `IN` has the same function with `OR`, but usually is more clear and more efficient, and it runs more faster.
 - `IN` could include other `SELECT` clauses.
 - `NOT` in `WHERE` clause only does one thing: negate all the conditions afterwards. It never use by itself.
@@ -114,7 +114,7 @@ WHERE vend_id != 'DLL01'
 - `[]` : a set of characters, which uses to match the keywords in specific location. This search pattern uses any **one** char of the set.
     - In this case, negation is represented by `^` sign, or `NOT` operator. 
 - Don't overuse wildcards: operators > wildcards.
-- If place wildcard in the beginning of the search process, would make the process slow.
+- If place wildcard in the beginning of the search process, would make the process *slow*.
 
 ```SQL
 
@@ -409,11 +409,11 @@ OR cust_name = 'Fun4All';
 ```
 
 
-### INSERT
+### INSERT, CREATE
 - `INSERT INTO` + `VALUES` to an already exist table;
 - `INSERT INTO`+ `SELECT` to an already exist table from another table;
 - Copy cols and values from an old table to a new table: `SELECT INTO`
-
+- `CREATE TEMPORARY TABLE`
 
 ```SQL
 
@@ -463,10 +463,17 @@ INTO CustCopy
 FROM Customers;
 
 /* But this line has been used slightly differently in MariaDB、MySQL、Oracle、PostgreSQL and SQLite: */
+
 CREATE TABLE CustCopy AS
 SELECT * FROM Customers;
 
-
+--------------------------------
+CREATE TEMPORARY TABLE Scandals AS 
+(
+    SELECT *
+    FROM shoes
+    WHERE shoe_type = 'scandals'
+);
 ```
 
 ### UPDATE & DELETE

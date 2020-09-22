@@ -62,3 +62,39 @@ In each Region, AWS will provision a default VPC. This VPC has a /16 IPv4 CIDR a
 You can modify or delete the default VPC if you want to do so.
 
 The most current details on the default VPC can be found here: https://docs.aws.amazon.com/vpc/latest/userguide/default-vpc.html
+
+
+## Storage 
+### S3
+S3 is object level storage.
+There are two types of storage: object level and block level storage.
+![-w301](media/15985131937748.jpg)
+
+If you have an image, like we have here, and you want to update that image, you have to update the entire file. So the whole file's going to change. In contrast, databases like Amazon RDS run on top of block-level storage.
+
+How this works is if we wanted to change the location for a contact, we could just change the corresponding blocks. We do not need to update the entire data file for every single change. For object storage, we use Amazon S3. This provides highly durable and scalable stores for items like images, videos, text files, and more.
+
+Storage for databases and EC2 instances use block-level storage, like Amazon Elastic Block Storage, or EBS. For file storage and shared file systems, we offer Amazon Elastic File System, or Amazon EFS.
+
+### Elastic Block Storage (EBS)
+
+Amazon Elastic Block Store (Amazon EBS) provides persistent block storage volumes for use with Amazon EC2 instances in the AWS Cloud. 
+
+### S3
+Amazon Simple Storage Service (Amazon S3) stores data as objects within resources that are called buckets. You can store as many objects as you want within a bucket, and you can write, read, and delete objects in your bucket. Objects can be up to 5 TB in size.
+
+# AWS Fundamentals - 3: Database
+### BYODB vs Amazon RDS
+### DynamoDB
+Amazon DynamoDB is a fast and flexible NoSQL database service for applications that need consistent, single-digit millisecond latency at any scale. Its a fully managed cloud database, and it supports both document and key-value store models. Its flexible data model, reliable performance, and automatic scaling of throughput capacity make it a great fit for mobile, web, gaming, advertising technology (ad tech), Internet of Things (IoT), and many other applications.
+### S3
+# AWS Fundamentals - 4: Monitoring and Scaling Our Application
+## Monitoring and Amazon CloudWatch
+
+#Security and Cost Management 
+## Security
+![-w453](media/15998065681572.jpg)
+
+## Cost Management 
+### AWS Trusted Advisor
+AWS Trusted Advisor is an online resource to help you reduce costs, increase performance, and improve security by optimizing your AWS environment. Trusted Advisor provides real-time guidance to help you provision your resources by following our best practices. 

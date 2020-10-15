@@ -98,3 +98,4 @@ Amazon DynamoDB is a fast and flexible NoSQL database service for applications t
 ## Cost Management 
 ### AWS Trusted Advisor
 AWS Trusted Advisor is an online resource to help you reduce costs, increase performance, and improve security by optimizing your AWS environment. Trusted Advisor provides real-time guidance to help you provision your resources by following our best practices. 
+

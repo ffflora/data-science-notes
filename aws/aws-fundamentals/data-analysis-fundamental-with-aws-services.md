@@ -68,7 +68,117 @@ structured data.
 
 Fast, centralized data retrieval. 
 
+Data lakes and daka warehouses are two different storage systems. Data lakes are not  a replacement for data warehouses. 
+
+A data warehouse is a **central repository** of **structured** data from **many** data sources. This data is **transformed**, **aggregated**, and **prepared** for business reporting and analysis.
+
+![image-20201030210016708](/Users/flora/Library/Application Support/typora-user-images/image-20201030210016708.png)
+
+A data warehouse is a central repository of information coming from one or more data sources. Data flows into a data warehouse from transactional systems, relational databases, and other sources. These data sources can include structured, semistructured, and unstructured data. These data sources are transformed into structured data before they are stored in the data warehouse.
+
+Data is stored within the data warehouse using a schema. A schema defines how data is stored within tables, columns, and rows. The schema enforces constraints on the data to ensure integrity of the data. The transformation process often involves the steps required to make the source data conform to the schema. Following the first successful ingestion of data into the data warehouse, the process of ingesting and transforming the data can continue at a regular cadence.
+
+Business analysts, data scientists, and decision makers access the data through business intelligence (BI) tools, SQL clients, and other analytics applications. Businesses use reports, dashboards, and analytics tools to extract insights from their data, monitor business performance, and support decision making. These reports, dashboards, and analytics tools are powered by data warehouses, which store data efficiently to minimize I/O and deliver query results at blazing speeds to hundreds and thousands of users concurrently.
+
+
+
+![image-20201030233712765](/Users/flora/Library/Application Support/typora-user-images/image-20201030233712765.png)
+
+### Data Marts
+
+A subset of a data warehouse.
+
+A subset of data from a data warehouse is called a **data mart**. Data marts only **focus on one subject or functional area**. A warehouse might contain all relevant sources for an enterprise, but a data mart might store **only a single department’s sources**. Because data marts are generally a copy of data already contained in a data warehouse, they are often **fast and simple to implement.**
+
+![image-20201030231123696](/Users/flora/Library/Application Support/typora-user-images/image-20201030231123696.png)
+
+
+
 ### Amazon Redshift Spectrum
+
+Amazon Redshift overcomes all of data lake's negatives by providing a **cloud-based, scalable, secure environment** for your data warehouse. Amazon Redshift is easy to set up, deploy, and manage and provides up to 10 times faster performance than other data warehousing solutions.
+
+|               **Benefits of Amazon Redshift**                |
+| :----------------------------------------------------------: |
+| **Faster performance**  10x faster than other data warehouses |
+|            **Easy to set up**, deploy, and manage            |
+|                          **Secure**                          |
+|            **Scales quickly** to meet your needs             |
+
+#### **Data Warehouse vs Data Lakes**
+
+For analysis to be most effective, it should be performed on data that has been processed and cleansed. This often means implementing an ETL operation to collect, cleanse, and transform the data. This data is then placed in a data warehouse. It is very common for data from many different parts of the organization to be combined into a single data warehouse.
+
+Amazon Redshift is a data warehousing solution specially designed for workloads of all sizes. Amazon Redshift Spectrum even provides the ability to query data that is housed in an Amazon S3 data lake.![image-20201030234922475](/Users/flora/Library/Application Support/typora-user-images/image-20201030234922475.png)
+
+**Data lakes extend data warehouses**
+
+Data lakes provide customers a means for including unstructured and semistructured data in their analytics. Analytic queries can be run over cataloged data within a data lake. This extends the reach of analytics beyond the confines of a single data warehouse.
+
+Businesses can securely store data coming from applications and devices in its native format, with high availability, durability, at low cost, and at any scale. Businesses can easily access and analyze data in a variety of ways using the tools and frameworks of their choice in a high-performance, cost-effective way without having to move large amounts of data between storage and analytics systems.
+
+![image-20201030235045512](/Users/flora/Library/Application Support/typora-user-images/image-20201030235045512.png)
+
+| Characteristics        | Data Warehouse                                               | Data Lakes                                                   |
+| ---------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **Data**               | Relational from transactional systems, operational databases, and line of business applications | Non-relational and relational from IoT devices, websites, mobile apps, social media, and corporate applications |
+| **Schema**             | Designed prior to implementation (schema-on-write)           | Written at the time of analysis  (schema-on-read)            |
+| **Price/ performance** | Fastest query results using higher cost storage              | Query results getting faster using  low-cost storage         |
+| **Data quality**       | Highly curated data that serves as the central version of the truth | Any data, which may or may not be curated (e.g., raw data)   |
+| **Users**              | Business analysts                                            | Data scientists, data developers, and business analysts (using curated data) |
+| **Analytics**          | Batch reporting, BI, and visualizations                      | Machine learning, predictive analytics, data discovery, and profiling. |
+
+### **Data storage on a BIG scale**
+
+We have discussed several recommendations for storing data: 
+
+- When storing **individual objects or files**, we recommend Amazon **S3**.
+- When storing **massive volumes of data, both semistructured and unstructured**, we recommend **building a data lake on Amazon S3**.
+- When storing massive amounts of **structured data for complex analysis, we recommend storing your data in Amazon Redshift.**
+
+
+
+### **Apache Hadoop**
+
+When many people think of working with a massive volume of fast-moving data, the first thing that comes to mind is Hadoop. Within AWS, Hadoop frameworks are implemented using Amazon **EMR** and AWS G**l**ue. These services implement the Hadoop framework to **ingest, transform, analyze, and move results to analytical data stores.**
+
+Hadoop uses a **distributed processing architecture**, in which a task is mapped to a cluster of commodity servers for processing. Each piece of work distributed to the cluster servers can be run or re-run on any of the servers. The cluster servers frequently use the **Hadoop Distributed File System (HDFS)** to store data locally for processing. The results of the computation performed by those servers are then reduced to a single output set. One node, designated as the master node, controls the distribution of tasks and can automatically handle server failures.
+
+#### **Benefits of using Apache Hadoop**
+
+- **Handle uncertainty better**: Hadoop facilitates data navigation, discovery, and one-time data analysis. With Hadoop, you can compensate for unexpected occurrences by analyzing large amounts of data quickly to form a response.
+
+- **Manage Data Variety**: Hadoop can process structured, semistructured, or unstructured data. This includes virtually any data format currently available.
+
+  In addition to natively handling many types of data (such as XML, CSV, text, log files, objects, SQL, JSON, and binary), you can use Haddop to transform data into formats that allow better integration into your existing data sets. Also, you can store data with or without a schema and perform large-scale ETL operations to transform your data.
+
+- **Wide Selection of Solutions**: Because Hadoop is open source, several ecosystem projects are available to help you analyze the multiple types of data Hadoop can process and analyze.
+
+  These projects give you tremendous flexibility when you are developing data analytics solutions. Hadoop’s programming frameworks (such as Hive and Pig) can support almost any data analytics use case for your applications.
+
+  ![image-20201031000543210](/Users/flora/Library/Application Support/typora-user-images/image-20201031000543210.png)
+
+- **Build for volume and velocity**: Because of Hadoop’s distributed architecture, Hadoop clusters can handle tremendous amounts of data affordably. Adding additional data processing capability is as simple as adding additional servers to your cluster (horizontal scaling). 
+
+#### **Implementing Hadoop with Amazon EMR**
+
+Amazon EMR is the AWS service that implements Hadoop frameworks. The service will ingest data from nearly any data source type at nearly any speed! Amazon EMR has the ability to implement two different file systems: **HDFS** or the **Elastic MapReduce File System (EMRFS)**. A file system is a set of organizational rules that govern how files are stored. 
+
+##### **HDFS**
+
+To handle massive volumes of data rapidly, the processing system required a way to distribute the load of reading and writing files across tens or even hundreds of high-powered servers. HDFS is distributed storage allowing files to be read and written to clusters of servers in **parallel**. This dramatically reduces the overall length of each and every operation.
+
+It is helpful to understand the inner workings of an HDFS cluster. An HDFS cluster primarily consists of a ***NameNode***, **which manages the file system metadata, and *DataNodes*, which store the actual data.**
+
+![image-20201031001440898](/Users/flora/Library/Application Support/typora-user-images/image-20201031001440898.png)![image-20201031001458920](/Users/flora/Library/Application Support/typora-user-images/image-20201031001458920.png)![image-20201031001516185](/Users/flora/Library/Application Support/typora-user-images/image-20201031001516185.png)
+
+![image-20201031001546662](/Users/flora/Library/Application Support/typora-user-images/image-20201031001546662.png)![](/Users/flora/Library/Application Support/typora-user-images/image-20201031001632817.png)
+
+Amazon EMR is the AWS service that implements Hadoop frameworks. An Amazon EMR process begins by ingesting data from one or more data sources and storing that data within a file system. If using HDFS, the file system is stored as an elastic block store volume. This storage volume is ephemeral meaning that the storage is of a temporary nature. Once the data has been copied into the HDFS volume, the transformation and analysis of the data is performed. The results are then sent to an analytical data store, such as an Amazon S3 data lake or Amazon Redshift data warehouse.
+
+##### **Amazon EMRFS**
+
+Amazon EMR provides an alternative to HDFS: the EMR File System (EMRFS). EMRFS can help ensure that there is a persistent "source of truth" for HDFS data stored in Amazon S3. When implementing EMRFS, there is no need to copy data into the cluster before transforming and analyzing the data as with HDFS. EMRFS can catalog data within a data lake on Amazon S3. The time that is saved by eliminating the copy step can dramatically improve performance of the cluster.
 
 ## Velocity - Data Processing
 

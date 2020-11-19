@@ -221,3 +221,39 @@ The slower collection of data followed by a rapid processing requirement is a co
 
 The rapid collection of data followed by the rapid processing of data is a common signature of streaming analytics.
 
+### **Batch processing architecture**
+
+Batch processing can be performed in different ways using AWS services. i.e., 
+
+**S3, Lambda, EMR, Glue, Redshift.**
+
+Amazon **EMR** provides a managed Hadoop framework that makes it easy, fast, and cost-effective to process vast amounts of data across dynamically scalable Amazon EC2 instances. 
+
+Amazon **EMR** is a managed service for executing highly complex, massive batch workloads. This service also allows highly complex analytic operations.
+
+AWS **Glue** is a fully managed extract, transform, and load (ETL) service that makes it easy for you to prepare and load your data for analytics. 
+
+Amazon **Redshift** is a fast, scalable data warehouse that makes it simple and cost-effective to analyze all your data across your data warehouse and data lake. 
+
+Amazon **Redshift** is a managed data warehouse service that stores large amounts of transactional data for the purpose of analytics.
+
+AWS **Lambda** is a serverless compute service that can be used to trigger processing operations in a batch processing system.
+
+
+
+### Stream Data Processing
+
+#### AWS Knesis
+
+**Amazon Kinesis Data Firehose** is the easiest way to capture, transform, and load data streams into AWS data stores for near real-time analytics with existing business intelligence tools. 
+
+**Amazon Kinesis Data Analytics** is the easiest way to process data streams in real time with SQL or Java without having to learn new programming languages or processing frameworks.
+
+**...**
+
+##### Other stream processing architecture: 
+
+**Amazon Athena** is an interactive query service that makes it easy to analyze data in Amazon S3 using standard SQL. Athena is serverless, so there is no infrastructure to manage, and you pay only for the queries that you run.
+
+**Amazon QuickSight** is a fast, cloud-powered business intelligence (BI) service that makes it easy for you to deliver insights to everyone in your organization.
+

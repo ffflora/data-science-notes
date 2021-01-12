@@ -1,4 +1,4 @@
-# Intro to DA
+# Intro to Data Analytics Fundamental with AWS Solutions
 
 The challenges identified in many data analysis solutions can be summarized by five key challenges: **volume**, **velocity**, **variety**, **veracity**, and **value**.
 
@@ -256,4 +256,143 @@ AWS **Lambda** is a serverless compute service that can be used to trigger proce
 **Amazon Athena** is an interactive query service that makes it easy to analyze data in Amazon S3 using standard SQL. Athena is serverless, so there is no infrastructure to manage, and you pay only for the queries that you run.
 
 **Amazon QuickSight** is a fast, cloud-powered business intelligence (BI) service that makes it easy for you to deliver insights to everyone in your organization.
+
+
+
+## Variety – data structure and types
+
+![image-20210109152122711](/Users/flora/Library/Application Support/typora-user-images/image-20210109152122711.png)
+
+Surprisingly, the most common data types auch as `csv` and `JSON` are semistructured data.
+
+### Intro to Structured Data Stores
+
+#### Flat-file Data
+
+Flat-file data generally resides in a worksheet or spreadsheet.
+
+#### **Relational databases**
+
+A process known as normalization helps a business take flat-file data and turn it into a relational database. Normalization is a set of rules that work together to reduce redundancy, increase reliability, and improve the consistency of data storage.
+
+#### **Types of information systems**
+
+There are two main ways—known as information systems—of organizing data within a relational database. The data can be organized to focus on the storage of transactions or the process of analyzing transactions.
+
+Transactional databases are called online transaction processing (OLTP) databases. The data gathered by OLTP databases is often fed into another type of database that focuses on analyzing the transactional data. Online analytical processing (OLAP) databases gather data from OLTP systems for the purpose of organizing it for analytical operations.
+
+#### ***\*Comparing OLTP and OLAP\****
+
+| **Characteristic** | **OLTP**                                             | **OLAP**                                |
+| ------------------ | ---------------------------------------------------- | --------------------------------------- |
+| **Nature**         | Constant transactions (queries/updates)              | Periodic large updates, complex queries |
+| **Examples**       | Accounting database, online retail transactions      | Reporting, decision support             |
+| **Type**           | Operational data                                     | Consolidated data                       |
+| **Data retention** | Short-term (2-6 months)                              | Long-term (2-5 years)                   |
+| **Storage**        | Gigabytes (GB)                                       | Terabytes (TB)/petabytes (PB)           |
+| **Users**          | Many                                                 | Few                                     |
+| **Protection**     | Robust, constant data protection and fault tolerance | Periodic protection                     |
+
+In an **OLTP system**, the most common queries are called lookup queries. These queries need to return several columns of data for each matching record. The filters on this data are generally based on the key columns in that table. In this type of system, you might query to get details for a specific order.
+
+In an **OLAP system**, the most common queries are aggregate queries. These queries take large numbers of rows and reduce them to a single row by aggregating the values in one or more columns. In this type of system, you might query to find out the total number of items sold on a specific date.
+
+|                      | **Row-based indexes**                      | **Columnar indexes**                    |
+| -------------------- | ------------------------------------------ | --------------------------------------- |
+| **Storage on disk**  | Row by row                                 | Column by column                        |
+| **Read/write**       | Best at random reads and writes            | Best at sequential reads and writes     |
+| **Best for**         | Returning full rows of data based on a key | Returning aggregations of column values |
+| **Implementation**   | Transactional systems                      | Analytical processing                   |
+| **Data compression** | Low to medium compression can be achieved  | High compression is the norm            |
+
+##### AWS Solution:
+
+Within AWS, the **Amazon Relational Database Service (Amazon RDS)** provides the needs for many different relational database management systems. It supports the most popular database engines including Amazon Aurora, MySQL, PostgreSQL, MariaDB, Oracle, and SQL Server.
+
+**Amazon Redshift **is a fast, scalable data warehouse that makes it simple and cost effective to analyze all your data across your data warehouse and data lake. Amazon Redshift delivers 10 times faster performance than other data warehouses by using machine learning, massively parallel query execution, and columnar storage on high-performance disk. You can set up and deploy a new data warehouse in minutes and run queries across petabytes of data in your Amazon Redshift data warehouse and exabytes of data in your data lake built on Amazon S3.
+
+Amazon Redshift implements columnar indexing to achieve the the right performance for analytical workloads.
+
+### Intro to Semistructured and Unstructured Data Stores
+
+Semistructured and unstructured data are often stored in non-relational database systems, sometimes called NoSQL databases. 
+
+
+
+#### Data Schemas
+
+![image-20210110210251527](/Users/flora/Library/Application Support/typora-user-images/image-20210110210251527.png)
+
+##### **AWS Solutions:**
+
+Amazon **DynamoDB** is a key-value and document database that delivers single-digit millisecond performance at any scale. It's a fully managed, multiregion, multimaster database with built-in security, backup and restore, and in-memory caching for internet-scale applications. DynamoDB can handle more than 10 trillion requests per day and support peaks of more than 20 million requests per second.
+
+### **Graph databases**
+
+Graph databases are purpose-built to store any type of data: structured, semistructured, or unstructured. The purpose for organization in a graph database is to navigate **relationships**. Data within the database is queried using specific languages associated with the software tool you have implemented.
+
+![image-20210111235609272](/Users/flora/Library/Application Support/typora-user-images/image-20210111235609272.png)
+
+
+
+##### The AWS Solution:
+
+**Amazon Neptune** is a fast, reliable, fully managed graph database service that makes it easy to build and run applications that work with highly connected data sets.
+
+The core of Neptune is a purpose-built, high-performance graph database engine optimized for storing billions of relationships and querying the graph with milliseconds latency.
+
+
+
+| **Characteristic**  | **Relational**                                       | **Non-relational**                                        | **Graph**                              |
+| ------------------- | ---------------------------------------------------- | --------------------------------------------------------- | -------------------------------------- |
+| **Representation**  | Multiple tables, each containing columns and rows    | Collection of documents Single table with keys and values | Collections of nodes and relationships |
+| **Data** **design** | Normalized relational or dimensional data warehouse. | Denormalized document, wide column or key value           | Denormalized entity relationship       |
+| **Optimized**       | Optimized for storage                                | Optimized for compute                                     | Optimized for relationships            |
+| **Query** **style** | Language: SQL                                        | Language: many Uses object querying                       | Language: many Uses object querying    |
+| **Scaling**         | Scale vertically                                     | Scale horizontally                                        | Hybrid                                 |
+| **Implementation**  | OLTP business systems, OLAP data warehouse           | OLTP web/mobile apps                                      | OLTP web/mobile apps                   |
+
+A multidemensional data warehouse is best suited for a **relational database**.
+
+Log files are generally produced in the form of XML or JSON files, which are very well suited for storage in a **document database**.
+
+Data collected from online gaming websites is often very rapid in generation and temporary in nature. This data is well suited for a **key-value database**.
+
+Transactional data from a social subscription service could be stored in a relational database, but due to the social component, it would be better suited to the advantages gained by using a **graph database**.
+
+##### Remark: Horizontal vs Vertical Scaling
+
+Scalable Dimensions:
+
+- concurrent Connections,
+
+- CPU high or low
+
+- Memory(Quantity + Speed)
+
+- Netword Interfaces
+
+  ![image-20210112001502324](/Users/flora/Library/Application Support/typora-user-images/image-20210112001502324.png)
+
+
+
+Scale Horizontally by adding more nodes and a load balancer.
+
+Horizontal has more startup cost, but better efficiency and safer.
+
+Scale Vertically by adding more powerful hardware.
+
+Vertical has lower cost efficiency and a theoretical maximum. 
+
+
+
+
+
+
+
+
+
+
+
+
 

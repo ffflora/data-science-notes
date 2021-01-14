@@ -30,7 +30,7 @@ An **object** is composed of a file and any metadata that describes that file. T
 
 Once objects have been stored in an Amazon S3 bucket, they are given an **object key**. Use this, along with the bucket name, to access the object.
 
-![image-20201028180458759](/Users/flora/Library/Application Support/typora-user-images/image-20201028180458759.png)
+![image-20201028180458759](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20201028180458759.png?raw=true)
 
 An **object key** is the unique identifier for an object in a bucket. Because the combination of a bucket, key, and version ID uniquely identifies each object, you can think of Amazon S3 as a basic data map between "bucket + key + version" and the object itself. Every object in Amazon S3 can be uniquely addressed through the combination of the web service endpoint, bucket name, key, and (optionally) version.
 
@@ -72,7 +72,7 @@ Data lakes and daka warehouses are two different storage systems. Data lakes are
 
 A data warehouse is a **central repository** of **structured** data from **many** data sources. This data is **transformed**, **aggregated**, and **prepared** for business reporting and analysis.
 
-![image-20201030210016708](/Users/flora/Library/Application Support/typora-user-images/image-20201030210016708.png)
+![image-20201030210016708](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20201030210016708.png?raw=true)
 
 A data warehouse is a central repository of information coming from one or more data sources. Data flows into a data warehouse from transactional systems, relational databases, and other sources. These data sources can include structured, semistructured, and unstructured data. These data sources are transformed into structured data before they are stored in the data warehouse.
 
@@ -82,7 +82,7 @@ Business analysts, data scientists, and decision makers access the data through 
 
 
 
-![image-20201030233712765](/Users/flora/Library/Application Support/typora-user-images/image-20201030233712765.png)
+![image-20201030233712765](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20201030233712765.png?raw=true)
 
 ### Data Marts
 
@@ -90,7 +90,7 @@ A subset of a data warehouse.
 
 A subset of data from a data warehouse is called a **data mart**. Data marts only **focus on one subject or functional area**. A warehouse might contain all relevant sources for an enterprise, but a data mart might store **only a single department’s sources**. Because data marts are generally a copy of data already contained in a data warehouse, they are often **fast and simple to implement.**
 
-![image-20201030231123696](/Users/flora/Library/Application Support/typora-user-images/image-20201030231123696.png)
+![image-20201030231123696](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20201030231123696.png?raw=true)
 
 
 
@@ -109,7 +109,7 @@ Amazon Redshift overcomes all of data lake's negatives by providing a **cloud-ba
 
 For analysis to be most effective, it should be performed on data that has been processed and cleansed. This often means implementing an ETL operation to collect, cleanse, and transform the data. This data is then placed in a data warehouse. It is very common for data from many different parts of the organization to be combined into a single data warehouse.
 
-Amazon Redshift is a data warehousing solution specially designed for workloads of all sizes. Amazon Redshift Spectrum even provides the ability to query data that is housed in an Amazon S3 data lake.![image-20201030234922475](/Users/flora/Library/Application Support/typora-user-images/image-20201030234922475.png)
+Amazon Redshift is a data warehousing solution specially designed for workloads of all sizes. Amazon Redshift Spectrum even provides the ability to query data that is housed in an Amazon S3 data lake.![image-20201030234922475](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20201030234922475.png?raw=true)
 
 **Data lakes extend data warehouses**
 
@@ -117,7 +117,7 @@ Data lakes provide customers a means for including unstructured and semistructur
 
 Businesses can securely store data coming from applications and devices in its native format, with high availability, durability, at low cost, and at any scale. Businesses can easily access and analyze data in a variety of ways using the tools and frameworks of their choice in a high-performance, cost-effective way without having to move large amounts of data between storage and analytics systems.
 
-![image-20201030235045512](/Users/flora/Library/Application Support/typora-user-images/image-20201030235045512.png)
+![image-20201030235045512](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20201030235045512.png?raw=true)
 
 | Characteristics        | Data Warehouse                                               | Data Lakes                                                   |
 | ---------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -156,7 +156,7 @@ Hadoop uses a **distributed processing architecture**, in which a task is mapped
 
   These projects give you tremendous flexibility when you are developing data analytics solutions. Hadoop’s programming frameworks (such as Hive and Pig) can support almost any data analytics use case for your applications.
 
-  ![image-20201031000543210](/Users/flora/Library/Application Support/typora-user-images/image-20201031000543210.png)
+  ![image-20201031000543210](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20201031000543210.png?raw=true)
 
 - **Build for volume and velocity**: Because of Hadoop’s distributed architecture, Hadoop clusters can handle tremendous amounts of data affordably. Adding additional data processing capability is as simple as adding additional servers to your cluster (horizontal scaling). 
 
@@ -170,9 +170,9 @@ To handle massive volumes of data rapidly, the processing system required a way 
 
 It is helpful to understand the inner workings of an HDFS cluster. An HDFS cluster primarily consists of a ***NameNode***, **which manages the file system metadata, and *DataNodes*, which store the actual data.**
 
-![image-20201031001440898](/Users/flora/Library/Application Support/typora-user-images/image-20201031001440898.png)![image-20201031001458920](/Users/flora/Library/Application Support/typora-user-images/image-20201031001458920.png)![image-20201031001516185](/Users/flora/Library/Application Support/typora-user-images/image-20201031001516185.png)
+![image-20201031001440898](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20201031001440898.png?raw=true)![image-20201031001458920](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20201031001458920.png?raw=true)![image-20201031001516185](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20201031001516185.png?raw=true)
 
-![image-20201031001546662](/Users/flora/Library/Application Support/typora-user-images/image-20201031001546662.png)![](/Users/flora/Library/Application Support/typora-user-images/image-20201031001632817.png)
+![image-20201031001546662](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20201031001546662.png?raw=true)![](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20201031001632817.png?raw=true)
 
 Amazon EMR is the AWS service that implements Hadoop frameworks. An Amazon EMR process begins by ingesting data from one or more data sources and storing that data within a file system. If using HDFS, the file system is stored as an elastic block store volume. This storage volume is ephemeral meaning that the storage is of a temporary nature. Once the data has been copied into the HDFS volume, the transformation and analysis of the data is performed. The results are then sent to an analytical data store, such as an Amazon S3 data lake or Amazon Redshift data warehouse.
 
@@ -213,7 +213,7 @@ Amazon EMR provides an alternative to HDFS: the EMR File System (EMRFS). EMRFS c
 
 The table below highlights the difference between batch and stream processing: 
 
-![image-20201015002429812](/Users/flora/Library/Application Support/typora-user-images/image-20201015002429812.png)
+![image-20201015002429812](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20201015002429812.png?raw=true)
 
 ### Business Challenge 
 
@@ -261,7 +261,7 @@ AWS **Lambda** is a serverless compute service that can be used to trigger proce
 
 ## Variety – data structure and types
 
-![image-20210109152122711](/Users/flora/Library/Application Support/typora-user-images/image-20210109152122711.png)
+![image-20210109152122711](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20210109152122711.png?raw=true)
 
 Surprisingly, the most common data types auch as `csv` and `JSON` are semistructured data.
 
@@ -321,7 +321,7 @@ Semistructured and unstructured data are often stored in non-relational database
 
 #### Data Schemas
 
-![image-20210110210251527](/Users/flora/Library/Application Support/typora-user-images/image-20210110210251527.png)
+![image-20210110210251527](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20210110210251527.png?raw=true)
 
 ##### **AWS Solutions:**
 
@@ -331,7 +331,7 @@ Amazon **DynamoDB** is a key-value and document database that delivers single-di
 
 Graph databases are purpose-built to store any type of data: structured, semistructured, or unstructured. The purpose for organization in a graph database is to navigate **relationships**. Data within the database is queried using specific languages associated with the software tool you have implemented.
 
-![image-20210111235609272](/Users/flora/Library/Application Support/typora-user-images/image-20210111235609272.png)
+![image-20210111235609272](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20210111235609272.png?raw=true)
 
 
 
@@ -372,7 +372,7 @@ Scalable Dimensions:
 
 - Netword Interfaces
 
-  ![image-20210112001502324](/Users/flora/Library/Application Support/typora-user-images/image-20210112001502324.png)
+  ![image-20210112001502324](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20210112001502324.png?raw=true)
 
 
 

@@ -386,13 +386,69 @@ Vertical has lower cost efficiency and a theoretical maximum.
 
 
 
+## Veracity - Cleansing and Transformation 
+
+### **Definitions**
+
+**Curation** is the action or process of selecting, organizing, and looking after the items in a collection.
+**Data integrity** is the maintenance and assurance of the accuracy and consistency of data over its entire lifecycle.
+**Data veracity** is the degree to which data is accurate, precise, and trusted.
 
 
 
+### **Understanding database consistency** - ACID and BASE
+
+#### **ACID**
+
+***ACID** is an acronym for **A**tomicity, **C**onsistency, **I**solation, and **D**urability. It is a method for maintaining consistency and integrity in a structured database.*
+
+#### **BASE**
+
+**BASE** is an acronym for **B**asically **A**vailable **S**oft state **E**ventually consistent. \*It is a method for maintaining consistency and integrity in a structured or semistructured database.
+
+| **ACID compliance**                     | **BASE compliance**                  |
+| --------------------------------------- | ------------------------------------ |
+| Strong consistency                      | Weak consistency – stale data is OK  |
+| Isolation is key                        | Availability is key                  |
+| Focus on committed results              | Best effort results                  |
+| Conservative (pessimistic) availability | Aggressive (optimistic) availability |
+
+#### AWS Solution
+
+When it comes to performing the data transformation component of ETL, there are two options within AWS: Amazon EMR and AWS Glue. These two services provide similar results but require different amounts of knowledge and time investment.
+
+**Amazon EMR** is a more hands-on approach to creating your data pipeline. This service provides a robust data collection and processing platform. Using this service requires you to have strong technical knowledge and know-how on your team. The upside of this is that you can create a more customized pipeline to fit your business needs. Additionally, your infrastructure costs may be lower than running the same workload on AWS Glue.
+
+**AWS Glue** is a serverless, managed ETL tool that provides a much more streamlined experience than Amazon EMR. This makes the service great for simple ETL tasks, but you will not have as much flexibility as with Amazon EMR. You can also use AWS Glue as a metastore for your final transformed data by using the AWS Glue Data Catalog. This catalog is a drop-in replacement for a Hive metastore.
+
+## Value - Reporting and Business Intelligence 
+
+- What were total sales in April?
+
+  Questions relating to past events are answered using **descriptive analytics.**
+
+- What is the year-over-year total sales for the Asia Pacific region?
+
+  Questions comparing current data sets to past data sets are answered using **diagnostic analytics**.
+
+- What is the projected growth for smoking-related hospitalizations next year?
+
+  Questions looking for predictions of future events are answered using **predictive analytics**.
+
+- What products should I buy if I like the Seattle Seahawks?
+
+  Questions looking for recommendations based on preferences or prior purchase history are answered using **prescriptive analytics**.
+
+- What is the average number of vehicles spotted by my video doorbell?
+
+  Questions that require analysis of video, images, and voice are answered using **cognitive analytics.**
 
 
 
+#### AWS Solutions:
+
+**Amazon QuickSight** is a fast, easy-to-use, cloud-powered business analytics service that makes it easy for all employees within an organization to build visualizations, perform one-time analyses, and quickly get business insights from their data, any time, on any device.
 
 
 
-
+Interactive dashboards provide dashboard consumers with a self-service way to consume and slice and dice their data to answer questions without having to rely on a business intelligence team.

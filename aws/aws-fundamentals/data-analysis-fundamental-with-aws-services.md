@@ -213,7 +213,7 @@ Amazon EMR provides an alternative to HDFS: the EMR File System (EMRFS). EMRFS c
 
 The table below highlights the difference between batch and stream processing: 
 
-![image-20201015002429812](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20201015002429812.png?raw=true)
+![image-20201015002429812](https://raw.githubusercontent.com/ffflora/data-science-notes/master/archived-pics/aws/image-20201015002429812.png)
 
 ### Business Challenge 
 

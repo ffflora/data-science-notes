@@ -36,13 +36,13 @@ AWS **Glue**(ETL tool), AWS **Database Migration**, AWS **Step Functions**.
 
 - Using Apache Spark on Amazon EMR provides a managed framework
 
-![image-20210114223729670](/Users/flora/Library/Application Support/typora-user-images/image-20210114223729670.png)
+![image-20210114223729670](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20210114223729670.png?raw=true)
 
 - If your datasets or computations are not optimally compatible with SQL, you can use AWS Glue to seamlessly run Spark jobs (Scala and Python support) on data stored in your Amazon S3 buckets.
 
 - You can store a single source of data in Amazon S3 and perform ad hoc analysis.
 
-  This reference architecture shows how AWS services for big data and ML can help build a scalable analytical layer for healthcare data. Customers can store a single source of data in Amazon S3 and perform ad hoc analysis with Athena, integrate with a data warehouse on Amazon Redshift, build a visual dashboard for metrics using Amazon QuickSight, and build an ML model to predict readmissions using Amazon SageMaker. By not moving the data around and connecting to it using different services, customers avoid building redundant copies of the same data.![image-20210114224855633](/Users/flora/Library/Application Support/typora-user-images/image-20210114224855633.png)
+  This reference architecture shows how AWS services for big data and ML can help build a scalable analytical layer for healthcare data. Customers can store a single source of data in Amazon S3 and perform ad hoc analysis with Athena, integrate with a data warehouse on Amazon Redshift, build a visual dashboard for metrics using Amazon QuickSight, and build an ML model to predict readmissions using Amazon SageMaker. By not moving the data around and connecting to it using different services, customers avoid building redundant copies of the same data.![image-20210114224855633](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20210114224855633.png?raw=true)
 
 ### Sample Questions
 
@@ -50,13 +50,13 @@ AWS **Glue**(ETL tool), AWS **Database Migration**, AWS **Step Functions**.
 
    **ANS**:
 
-   ![image-20210114225713429](/Users/flora/Library/Application Support/typora-user-images/image-20210114225713429.png)
+   ![image-20210114225713429](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20210114225713429.png?raw=true)
 
 2. An ad-tech company has hired a data engineer to create and maintain a machine learning pipeline for its clickstream data. The data will be gathered **from various sources,** including on premises, and will need to be **streamed** to the company’s **Amazon EMR instances** for further processing.
 
    **ANS**:
 
-   ![image-20210114230019872](/Users/flora/Library/Application Support/typora-user-images/image-20210114230019872.png)
+   ![image-20210114230019872](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20210114230019872.png?raw=true)
 
 3. A transportation company currently uses Amazon EMR with Apache Spark for some of its data transformation workloads. It transforms columns of geographical data (like latitudes and longitudes) and adds columns to segment the data into different clusters per city to attain additional features for the k-nearest neighbors algorithm being used.
 
@@ -79,7 +79,7 @@ AWS **Glue**(ETL tool), AWS **Database Migration**, AWS **Step Functions**.
 
    What can the team do to improve their model?
 
-   ![image-20210118003049500](/Users/flora/Library/Application Support/typora-user-images/image-20210118003049500.png)
+   ![image-20210118003049500](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20210118003049500.png?raw=true)
 
 2. A team of data scientists in a financial company wants to predict the risk for their incoming customer loan applications. The team has decided to do this by applying the **XGBoost** algorithm, which will predict the probability that a customer will default on a loan. In order to create this solution, the team wants to first **merge the customer application data with demographic and location data** before feeding it into the model.
 
@@ -87,7 +87,7 @@ AWS **Glue**(ETL tool), AWS **Database Migration**, AWS **Step Functions**.
 
     What techniques can the team use to reach the goal? (Select TWO.)
 
-   ![image-20210118003924933](/Users/flora/Library/Application Support/typora-user-images/image-20210118003924933.png)
+   ![image-20210118003924933](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20210118003924933.png?raw=true)
 
    - AWS glue doesn't have that shit.
    - clustering doesn't help with dimensionality reduction.
@@ -169,7 +169,7 @@ Traditionally, this was done **manually**: someone who has domain experience rel
 
 **Grid search and Random search**
 
-![image-20210124232631210](/Users/flora/Library/Application Support/typora-user-images/image-20210124232631210.png)
+![image-20210124232631210](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20210124232631210.png?raw=true)
 
 - Grid Search: you can set up a grid made of hyperparams and their different values. For each possible combination, a model is trained and a score is produced on the validation data. With this approach, every single combination of the given possible hyperparams values is tried. Therefore this method could be very inefficient.
 - Random Search: similar to grid search, but random combinations are selected. You can set the number of search iterations based on time and resource constrains. 
@@ -186,15 +186,15 @@ Then there’s automated hyperparameter tuning, which uses methods like gradient
 
 **Accuracy is the ratio of correct predictions to total number of predictions**
 
-![image-20210124235038069](/Users/flora/Library/Application Support/typora-user-images/image-20210124235038069.png)
+![image-20210124235038069](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20210124235038069.png?raw=true)
 
-**Precision is the proportion of positive predictions that are actually correct**![image-20210124235458004](/Users/flora/Library/Application Support/typora-user-images/image-20210124235458004.png)
+**Precision is the proportion of positive predictions that are actually correct**![image-20210124235458004](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20210124235458004.png?raw=true)
 
 
 
 **Recall is the proportion of correct sets that are identified as positive**
 
-![image-20210124235541375](/Users/flora/Library/Application Support/typora-user-images/image-20210124235541375.png)
+![image-20210124235541375](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20210124235541375.png?raw=true)
 
 **Additional metrics include:**
 
@@ -275,7 +275,7 @@ At the heart of designing for failure are two concepts known as high availabilit
 
 In a highly available solution, the system will continue to function even when any component of the architecture stops working. A key aspect of high availability is fault tolerance, which, when built into an architecture, ensures that applications will continue to function without degradation in performance, despite the complete failure of any component of the architecture.
 
-<img src="/Users/flora/Library/Application Support/typora-user-images/image-20210125005554852.png" alt="image-20210125005554852" style="zoom:80%;" />
+<img src="https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20210125005554852.png?raw=true" alt="image-20210125005554852" style="zoom:80%;" />
 
 #### **One method of achieving high availability and fault tolerance is loose coupling**
 
@@ -303,7 +303,7 @@ AWS SQS (queue service), AWS Step Function(workflow service)
 
 
 
-![image-20210125160545179](/Users/flora/Library/Application Support/typora-user-images/image-20210125160545179.png)
+![image-20210125160545179](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20210125160545179.png?raw=true)
 
 
 
@@ -326,13 +326,13 @@ AWS CloudTrail captures API calls and related events made by or on behalf of you
 
 To ensure a highly available ML serving endpoint, deploy Amazon SageMaker endpoints backed by multiple instances across Availability Zones. 
 
-<img src="/Users/flora/Library/Application Support/typora-user-images/image-20210125163619540.png" alt="image-20210125163619540" style="zoom:25%;" />
+<img src="https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20210125163619540.png?raw=true" alt="image-20210125163619540" style="zoom:25%;" />
 
 ##### AMS SageMaker
 
 Amazon SageMaker makes it easy to containerize ML models for both training and inference. In doing so, you can create ML models made up of loosely coupled, distributed services that can be placed on any number of platforms, or close to the data that the applications are analyzing.
 
-![image-20210125170039194](/Users/flora/Library/Application Support/typora-user-images/image-20210125170039194.png)
+![image-20210125170039194](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20210125170039194.png?raw=true)
 
 ##### AWS Auto Scaling
 
@@ -350,7 +350,7 @@ If the endpoint has only a moderate load, you can run it on a single instance an
 
 
 
-![image-20210125170232859](/Users/flora/Library/Application Support/typora-user-images/image-20210125170232859.png)
+![image-20210125170232859](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20210125170232859.png?raw=true)
 
 Remark: 
 
@@ -373,7 +373,7 @@ ASG is used to:
 
 #### **The stack for Amazon machine learning has three tiers**
 
-![image-20210125212450908](/Users/flora/Library/Application Support/typora-user-images/image-20210125212450908.png)
+![image-20210125212450908](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20210125212450908.png?raw=true)
 
 ##### ML frameworks + infrastructure
 
@@ -381,19 +381,19 @@ The bottom tier of the stack is for expert ML practitioners who work at the fram
 
 **The vast majority of deep learning and ML in the cloud is done on P3 instances in AWS**. You can use whichever ML deep learning framework you like, but some popular options are TensorFlow, MXNet, and PyTorch, which are all supported on AWS.
 
-![image-20210125215339947](/Users/flora/Library/Application Support/typora-user-images/image-20210125215339947.png)
+![image-20210125215339947](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20210125215339947.png?raw=true)
 
 ##### ML Services
 
 AWS SageMaker is the heart of this tier.
 
-![image-20210125220216005](/Users/flora/Library/Application Support/typora-user-images/image-20210125220216005.png)
+![image-20210125220216005](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20210125220216005.png?raw=true)
 
 ##### AI Services
 
 AWS services in the top tier are for customers who really don't want to deal with building and training their ML models. All of that has been abstracted away, leaving you with easy-to-use services designed to help you deal with common ML problems in various domains, like computer vision, NLP, and time series forecasting. 
 
-![image-20210125220258775](/Users/flora/Library/Application Support/typora-user-images/image-20210125220258775.png)
+![image-20210125220258775](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20210125220258775.png?raw=true)
 
 ##### Amazon AI services 
 
@@ -461,7 +461,7 @@ You need to provide the endpoint configuration to Amazon SageMaker. The service 
 
 Amazon SageMaker supports automatic scaling for production variants. Automatic scaling dynamically adjusts the number of instances provisioned for a production variant in response to changes in your workload. When the workload increases, automatic scaling brings more instances online. When the workload decreases, automatic scaling removes unnecessary instances so that you don't pay for provisioned variant instances that you aren't using.
 
-![image-20210126003729710](/Users/flora/Library/Application Support/typora-user-images/image-20210126003729710.png)
+![image-20210126003729710](https://github.com/ffflora/data-science-notes/blob/master/archived-pics/aws/image-20210126003729710.png?raw=true)
 
 #### **Define and apply a scaling policy that uses Amazon CloudWatch metrics**
 
